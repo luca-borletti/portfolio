@@ -1,0 +1,30 @@
+.profileImage {
+    width: 200px;
+    height: 200px;
+    border: 1 px solid black;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+    background-color: #FBFBFD;
+}
+
+.navBar {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    background: black; 
+}
+
+.navBar > .element {
+    width: 33%;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    margin: 0;
+    font-family: Arial;
+    text-decoration: none; 
+}
