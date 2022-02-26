@@ -3,10 +3,23 @@ body {
     margin: 0;
 }
 
-/* p {
-    
-} */
+.nameText {
+    font-family: Arial;
+    text-align:center;
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0;
+    line-height: .35em;
+}
 
+.aboutText, .cmuText {
+    font-family: Arial;
+    text-align: center;
+}
+
+.cmuText {
+    color:red;
+}
 
 .profileImage {
     width: 50px;
@@ -19,24 +32,50 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    /* background-color: black; */
-    /* background-color: #FBFBFD; */
 }
 
 .navBar {
     width: 100%;
     height: 50px;
     margin: 0;
-    /* background: black;  */
+    align-self:center;
 }
 
-.navBar > .navList {
+.navBar > .element {
+    width: 32%;
+    line-height: 50px;
+    text-align: center;
+    color: black;
+    display: inline-block;
+    margin: 0;
+    font-family: Arial;
+    font-size: 1em;
+    text-decoration: none; 
+}
+
+.navBar > .element:hover { 
+    text-decoration: underline;
+    color: gray;
+}
+
+.navBar > .logo { 
+    float: left;
+}
+
+/* .topnav-right {
+    float: right; */
+}
+
+/* ############################## */
+
+
+/* .navBar > .navList {
     padding: 0px;
     margin: 0px;
     text-align: center;
     display:inline-block;
     vertical-align:top;
-
+    width: 50% */
     /* width: 32%;
     line-height: 50px;
     text-align: center;
@@ -45,30 +84,21 @@ body {
     margin: 0;
     font-family: Arial;
     text-decoration: none;  */
-}
+/* }
 
 .navList > .element {
+    width: 30%;
+    line-height: 50px;
+    text-align: center;
+    color: black;
+    display: inline-block;
+    font-family: Arial;
+    text-decoration: none;
     list-style-type: none;
-    padding: 0px;
-    height: 24px;
     display: inline;
 }
 
 .navList > .element:hover { 
     text-decoration: underline;
     color: gray;
-}
-
-
-/* .navBar > .element:hover { 
-    text-decoration: underline;
-    color: gray;
-} */
-
-.navBar > .logo { 
-    float: left;
-}
-
-/* .logo {
-    float: left;
 } */
