@@ -1,0 +1,299 @@
+@font-face {
+    font-family: helveticaNeue;
+    src: url("../assets/HelveticaNeue-01.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: helveticaNeueBold;
+    src: url("../assets/HelveticaNeue-Bold-02.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: helveticaNeueThin;
+    src: url("../assets/HelveticaNeue-Light-08.ttf") format("truetype");
+}
+
+:root {
+    --yellow: #E9C645;
+    --green: #77B856;
+    --blue: #2F6DF6;
+    --red: #BF436C;
+    --gray: #505050;
+    --bold-font: helveticaNeueBold;
+    --regular-font: helveticaNeue;
+    --thin-font: helveticaNeueThin;
+
+    --luca-fs: 38;
+    --sub-luca-fs: 38;
+    --category-fs: 38;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// DESCRIPTION //////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, span {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 30px 50px 0 50px;
+    height: 10vh;
+    box-sizing: border-box;
+
+    .name {
+        user-select:none;
+        h1.luca {
+            letter-spacing: 0;
+            margin: 0;
+            padding: 0;
+            font-family: var(--bold-font);
+            font-size: 34px;
+            letter-spacing: 0.093em;
+
+            span.L-letter {
+                color: var(--yellow);
+            }
+            span.U-letter {
+                color: var(--green);
+            }
+            span.C-letter {
+                color: var(--blue);
+            }
+            span.A-letter {
+                color: var(--red);
+            }
+            span.BORLETTI {
+                font-family: var(--thin-font);
+                font-size: var(--luca-fs);
+                color: var(--gray);
+            }
+        }
+    }
+    #pound-symbol {
+        height: 45px;
+        width: auto;
+    }
+}
+
+.main-content {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg#toolbelt {
+        width: 50%;
+        max-height: 90vh;
+        height: auto;
+    }
+}
+
+
+g, path {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+}
+#pencil_1, #pencil_2, #bp, #wrench, #hammer {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+}
+
+#g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects, #g_work {
+    cursor: pointer;
+}
+
+.pencil_1_active {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+    -ms-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+    -moz-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+    -o-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+    transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+    filter: brightness(110%) saturate(140%);
+}
+
+.pencil_2_active {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+    -ms-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+    -moz-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+    -o-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+    transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+    filter: brightness(110%) saturate(140%); 
+}
+.blueprint_active {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+    -ms-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+    -moz-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+    -o-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+    transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+    filter: brightness(110%) saturate(140%); 
+}
+.hammer_active {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+    -ms-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+    -moz-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+    -o-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+    transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+    filter: brightness(110%) saturate(140%); 
+}
+.wrench_active {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+    -ms-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+    -moz-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+    -o-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+    transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+    filter: brightness(110%) saturate(140%); 
+}
+
+.school_path_active {
+    stroke-dasharray: 421.3840026855469;
+    stroke-dashoffset: 0;
+    animation: school_dash .7s cubic-bezier(0.975, 0.22, 0.465, 1);
+}
+
+.school_path_inactive {
+    display: none;
+}
+
+@keyframes school_dash {
+    from {
+        stroke-dashoffset: 421.3840026855469;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.work_path_active {
+    stroke-dasharray: 355.6432189941406;
+    stroke-dashoffset: 0;
+    animation: work_dash .7s cubic-bezier(0.975, 0.22, 0.465, 1);
+}
+
+.work_path_inactive {
+    display: none;
+}
+
+@keyframes work_dash {
+    from {
+        stroke-dashoffset: 355.6432189941406;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.projects_path_active {
+    stroke-dasharray: 408.7936096191406;
+    stroke-dashoffset: 0;
+    animation: projects_dash .7s cubic-bezier(0.975, 0.22, 0.465, 1);
+}
+
+.projects_path_inactive {
+    display: none;
+}
+
+@keyframes projects_dash {
+    from {
+        stroke-dashoffset: 408.7936096191406;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#projects_text, #work_text, #school_text {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+}
+
+.projects_text_inactive, .work_text_inactive, .school_text_inactive {
+    display: unset;
+    opacity: 0;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// DEPRECATED ///////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// .nameText {
+//     font-family: Arial;
+//     text-align:center;
+//     font-size: 2.5em;
+//     padding: 0;
+//     margin: 0;
+//     line-height: .35em;
+// }
+
+// .aboutText, .cmuText {
+//     font-family: Arial;
+//     text-align: center;
+// }
+
+// .cmuText {
+//     color:red;
+// }
+
+// .profileImage {
+//     width: 50px;
+//     height: 50px;
+//     border: 1 px solid black;
+// }
+
+// .background {
+//     width: 100%;
+//     height: 100%;
+//     margin: 0;
+// }
+
+// .navBar {
+//     width: 100%;
+//     height: 50px;
+//     margin: 0;
+//     align-self:center;
+// }
+
+// .navBar > .element {
+//     width: 32%;
+//     line-height: 50px;
+//     text-align: center;
+//     color: black;
+//     display: inline-block;
+//     margin: 0;
+//     font-family: Arial;
+//     font-size: 1em;
+//     text-decoration: none; 
+// }
+
+// .navBar > .element:hover { 
+//     text-decoration: underline;
+//     color: gray;
+// }
+
+// .navBar > .logo { 
+//     float: left;
+// }
+
+// // @media only screen and (min-width: 780px) {
+
+// // }

@@ -1,0 +1,283 @@
+@font-face {
+  font-family: helveticaNeue;
+  src: url("../assets/HelveticaNeue-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: helveticaNeueBold;
+  src: url("../assets/HelveticaNeue-Bold-02.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: helveticaNeueThin;
+  src: url("../assets/HelveticaNeue-Light-08.ttf") format("truetype");
+}
+
+:root {
+  --yellow: #E9C645;
+  --green: #77B856;
+  --blue: #2F6DF6;
+  --red: #BF436C;
+  --gray: #505050;
+  --bold-font: helveticaNeueBold;
+  --regular-font: helveticaNeue;
+  --thin-font: helveticaNeueThin;
+  --luca-fs: 38;
+  --sub-luca-fs: 38;
+  --category-fs: 38;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+p, h1, span {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 50px 0 50px;
+  height: 10vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header .name {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.header .name h1.luca {
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
+  font-family: var(--bold-font);
+  font-size: 34px;
+  letter-spacing: 0.093em;
+}
+
+.header .name h1.luca span.L-letter {
+  color: var(--yellow);
+}
+
+.header .name h1.luca span.U-letter {
+  color: var(--green);
+}
+
+.header .name h1.luca span.C-letter {
+  color: var(--blue);
+}
+
+.header .name h1.luca span.A-letter {
+  color: var(--red);
+}
+
+.header .name h1.luca span.BORLETTI {
+  font-family: var(--thin-font);
+  font-size: var(--luca-fs);
+  color: var(--gray);
+}
+
+.header #pound-symbol {
+  height: 45px;
+  width: auto;
+}
+
+.main-content {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content svg#toolbelt {
+  width: 50%;
+  max-height: 90vh;
+  height: auto;
+}
+
+g, path {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+}
+
+#pencil_1, #pencil_2, #bp, #wrench, #hammer {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+}
+
+#g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects, #g_work {
+  cursor: pointer;
+}
+
+.pencil_1_active {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  -webkit-transform: translate(171.853px, 258.93px) rotate(2deg);
+  transform: translate(171.853px, 258.93px) rotate(2deg);
+  -webkit-filter: brightness(110%) saturate(140%);
+          filter: brightness(110%) saturate(140%);
+}
+
+.pencil_2_active {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  -webkit-transform: translate(234.343px, 293.865px) rotate(3deg);
+  transform: translate(234.343px, 293.865px) rotate(3deg);
+  -webkit-filter: brightness(110%) saturate(140%);
+          filter: brightness(110%) saturate(140%);
+}
+
+.blueprint_active {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  -webkit-transform: translate(493.038px, 284.28px) rotate(-5deg);
+  transform: translate(493.038px, 284.28px) rotate(-5deg);
+  -webkit-filter: brightness(110%) saturate(140%);
+          filter: brightness(110%) saturate(140%);
+}
+
+.hammer_active {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  -webkit-transform: translate(680.738px, 256.905px) rotate(-5deg);
+  transform: translate(680.738px, 256.905px) rotate(-5deg);
+  -webkit-filter: brightness(110%) saturate(140%);
+          filter: brightness(110%) saturate(140%);
+}
+
+.wrench_active {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  -webkit-transform: translate(862.317px, 305.937px) rotate(5deg);
+  transform: translate(862.317px, 305.937px) rotate(5deg);
+  -webkit-filter: brightness(110%) saturate(140%);
+          filter: brightness(110%) saturate(140%);
+}
+
+.school_path_active {
+  stroke-dasharray: 421.3840026855469;
+  stroke-dashoffset: 0;
+  -webkit-animation: school_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+          animation: school_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+}
+
+.school_path_inactive {
+  display: none;
+}
+
+@-webkit-keyframes school_dash {
+  from {
+    stroke-dashoffset: 421.3840026855469;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes school_dash {
+  from {
+    stroke-dashoffset: 421.3840026855469;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.work_path_active {
+  stroke-dasharray: 355.6432189941406;
+  stroke-dashoffset: 0;
+  -webkit-animation: work_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+          animation: work_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+}
+
+.work_path_inactive {
+  display: none;
+}
+
+@-webkit-keyframes work_dash {
+  from {
+    stroke-dashoffset: 355.6432189941406;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes work_dash {
+  from {
+    stroke-dashoffset: 355.6432189941406;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.projects_path_active {
+  stroke-dasharray: 408.7936096191406;
+  stroke-dashoffset: 0;
+  -webkit-animation: projects_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+          animation: projects_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+}
+
+.projects_path_inactive {
+  display: none;
+}
+
+@-webkit-keyframes projects_dash {
+  from {
+    stroke-dashoffset: 408.7936096191406;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes projects_dash {
+  from {
+    stroke-dashoffset: 408.7936096191406;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#projects_text, #work_text, #school_text {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+}
+
+.projects_text_inactive, .work_text_inactive, .school_text_inactive {
+  display: unset;
+  opacity: 0;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
