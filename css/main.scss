@@ -86,27 +86,36 @@ p, h1, span {
     }
 }
 
-.main-content {
+// #g_right:hover {
+    // transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    // transform: rotate(3deg);
+    // transform: translate(720.214px +1px, 434.458px +1px)
+// }
+
+.drawing-container {
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    svg#toolbelt {
-        width: 50%;
-        max-height: 90vh;
-        height: auto;
-    }
+}
+
+svg#toolbelt {
+    width: 50%;
+    max-height: 90vh;
+    height: auto;
 }
 
 
 g, path {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
-#pencil_1, #pencil_2, #bp, #wrench, #hammer {
+
+#g_pencil_1, #g_pencil_2, #g_bp, #g_wrench, #g_hammer, #g_phone {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
-#g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects, #g_work {
+#g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects, 
+#g_work, #g_phone, #g_contact {
     cursor: pointer;
 }
 
@@ -156,6 +165,15 @@ g, path {
     transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
     filter: brightness(110%) saturate(140%); 
 }
+.phone_active {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+    -ms-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+    -moz-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+    -o-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+    transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+    filter: brightness(110%) saturate(140%);
+}
 
 .school_path_active {
     stroke-dasharray: 421.3840026855469;
@@ -168,6 +186,25 @@ g, path {
 }
 
 @keyframes school_dash {
+    from {
+        stroke-dashoffset: 421.3840026855469;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.contact_path_active {
+    stroke-dasharray: 421.3840026855469;
+    stroke-dashoffset: 0;
+    animation: contact_dash .7s cubic-bezier(0.975, 0.22, 0.465, 1);
+}
+
+.contact_path_inactive {
+    display: none;
+}
+
+@keyframes contact_dash {
     from {
         stroke-dashoffset: 421.3840026855469;
     }
@@ -214,22 +251,41 @@ g, path {
     }
 }
 
-#projects_text, #work_text, #school_text {
+#projects_text, #work_text, #school_text, #contact_text {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
-.projects_text_inactive, .work_text_inactive, .school_text_inactive {
+.projects_text_inactive, .work_text_inactive, .school_text_inactive, 
+.contact_text_inactive {
     display: unset;
     opacity: 0;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
 .invisible {
+    // display:none;
     opacity: 0;
+    user-select: none;
+    cursor: default !important;
 }
 
 .visible {
     opacity: 1;
+}
+
+.container-off {
+    display: none !important;
+}
+
+#school-container, #work-container, #projects-container, #contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.move-contact {
+    // transform: translate(-100px, 0px) !important;
+    transform: translate3d(-100px, 0px, 0px) !important;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

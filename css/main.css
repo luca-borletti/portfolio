@@ -96,7 +96,7 @@ p, h1, span {
   width: auto;
 }
 
-.main-content {
+.drawing-container {
   height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,7 +109,7 @@ p, h1, span {
           align-items: center;
 }
 
-.main-content svg#toolbelt {
+svg#toolbelt {
   width: 50%;
   max-height: 90vh;
   height: auto;
@@ -120,12 +120,13 @@ g, path {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
-#pencil_1, #pencil_2, #bp, #wrench, #hammer {
+#g_pencil_1, #g_pencil_2, #g_bp, #g_wrench, #g_hammer, #g_phone {
   -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
-#g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects, #g_work {
+#g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects,
+#g_work, #g_phone, #g_contact {
   cursor: pointer;
 }
 
@@ -174,6 +175,15 @@ g, path {
           filter: brightness(110%) saturate(140%);
 }
 
+.phone_active {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  -webkit-transform: translate(292.398px, 693.332px) rotate(-144deg);
+  transform: translate(292.398px, 693.332px) rotate(-144deg);
+  -webkit-filter: brightness(110%) saturate(140%);
+          filter: brightness(110%) saturate(140%);
+}
+
 .school_path_active {
   stroke-dasharray: 421.3840026855469;
   stroke-dashoffset: 0;
@@ -195,6 +205,35 @@ g, path {
 }
 
 @keyframes school_dash {
+  from {
+    stroke-dashoffset: 421.3840026855469;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.contact_path_active {
+  stroke-dasharray: 421.3840026855469;
+  stroke-dashoffset: 0;
+  -webkit-animation: contact_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+          animation: contact_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+}
+
+.contact_path_inactive {
+  display: none;
+}
+
+@-webkit-keyframes contact_dash {
+  from {
+    stroke-dashoffset: 421.3840026855469;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes contact_dash {
   from {
     stroke-dashoffset: 421.3840026855469;
   }
@@ -261,12 +300,13 @@ g, path {
   }
 }
 
-#projects_text, #work_text, #school_text {
+#projects_text, #work_text, #school_text, #contact_text {
   -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
-.projects_text_inactive, .work_text_inactive, .school_text_inactive {
+.projects_text_inactive, .work_text_inactive, .school_text_inactive,
+.contact_text_inactive {
   display: unset;
   opacity: 0;
   -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
@@ -275,9 +315,31 @@ g, path {
 
 .invisible {
   opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default !important;
 }
 
 .visible {
   opacity: 1;
+}
+
+.container-off {
+  display: none !important;
+}
+
+#school-container, #work-container, #projects-container, #contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=main.css.map */
