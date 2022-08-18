@@ -33,6 +33,27 @@ window.onload = function() {
     var mode = "main"; // "main" || "school" || "work" || "projects" || "contact"
     // either have a null variable or a bunch of booleans
 
+    function animate({timing, draw, duration}) {
+
+        let start = performance.now();
+      
+        requestAnimationFrame(function animate(time) {
+          // timeFraction goes from 0 to 1
+          let timeFraction = (time - start) / duration;
+          if (timeFraction > 1) timeFraction = 1;
+      
+          // calculate the current animation state
+          let progress = timing(timeFraction);
+      
+          draw(progress); // draw it
+      
+          if (timeFraction < 1) {
+            requestAnimationFrame(animate);
+          }
+      
+        });
+    }
+
     function returnTools() {
             pencil1.classList.remove("pencil_1_active");
             pencil2.classList.remove("pencil_2_active");
@@ -260,31 +281,44 @@ window.onload = function() {
         }
     });
     
+    riseContact = function() {
+        animate({
+          duration: 2000,
+          timing: function(timeFraction) {
+            return timeFraction;
+          },
+          draw: function(progress) {
+            elem.style.width = progress * 100 + '%';
+          }
+        });
+      };  
+
     function openContact() {
-        // contactContainer.classList.remove("container-off");
+        contactContainer.classList.remove("container-off");
         for (const elem of allElements) {
             const id = elem.id;
-            if (!(id == "g_phone" || id == "g_contact")) {
+            // if (!(id == "g_phone" || id == "g_contact")) {
+            if (!(id == "w_contact")) {
                 elem.classList.add("invisible");
             }
-            else {
-                elem.style.transform = "translate( -100px, 0px);"
+            // else {
+                // elem.style.transform = "translate( -100px, 0px);"
                 // elem.classList.add("move-contact");
-            }
+            // }
         }
         mode = "contact";
     }
 
     function closeContact() {
-        // contactContainer.classList.add("container-off");
+        contactContainer.classList.add("container-off");
         for (const elem of allElements) {
             const id = elem.id;
-            if (!(id == "g_phone" || id == "g_contact")) {
+            if (!(id == "w_contact")) {
                 elem.classList.remove("invisible");
             }
-            else {
-                elem.classList.remove("move-contact");
-            }
+            // else {
+            //     elem.classList.remove("move-contact");
+            // }
         }
         mode = "main";
     }

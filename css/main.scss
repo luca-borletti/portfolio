@@ -100,7 +100,8 @@ p, h1, span {
 }
 
 svg#toolbelt {
-    width: 50%;
+    max-width: 80%;
+    // width: 50%;
     max-height: 90vh;
     height: auto;
 }
@@ -284,9 +285,22 @@ g, path {
 }
 
 .move-contact {
-    // transform: translate(-100px, 0px) !important;
-    transform: translate3d(-100px, 0px, 0px) !important;
+    transform: translate(-100px, 0px) !important;
+    // transform: translate3d(-100px, 0px, 0px) !important;
 }
+
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// >550 pixels //////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+@media only screen and (min-width: 550px) {
+    svg#toolbelt {
+        width: 50%;
+    }
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// DEPRECATED ///////////////////////////////////
