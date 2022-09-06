@@ -1,5 +1,18 @@
 window.onload = function() {
-    // const toolbeltW = document.getElementById('drawing-wrapper'); 
+    const lLetter = document.getElementById('L-letter'); 
+    const uLetter = document.getElementById('U-letter'); 
+    const cLetter = document.getElementById('C-letter'); 
+    const aLetter = document.getElementById('A-letter'); 
+    const borletti = document.getElementById('BORLETTI'); 
+    const navbar = document.getElementById('header'); 
+
+    const poundLogo = document.getElementById('pound-symbol'); 
+    const pTopRight = document.getElementById('w_top_right'); 
+    const pRight = document.getElementById('w_right'); 
+    const pBottom = document.getElementById('w_bottom'); 
+    const pLeft = document.getElementById('w_left'); 
+    const pTopLeft = document.getElementById('w_top_left');  
+
     const toolbelt = document.getElementById('toolbelt');
     const toolbeltg = document.getElementById('toolbeltg');
     const allElements = toolbeltg.children;
@@ -30,8 +43,42 @@ window.onload = function() {
     const projectsContainer = document.getElementById('projects-container');
     const contactContainer = document.getElementById('contact-container');
 
+    let ageEl = document.getElementById("age");
+
+    if (ageEl) {
+        setInterval(() => {
+            let time = dayjs().diff(dayjs('2003-03-28'), 'year', true);
+            ageEl.innerText = time.toString().substring(0, 12);
+        }, 50);
+    }
+        
     var mode = "main"; // "main" || "school" || "work" || "projects" || "contact"
     // either have a null variable or a bunch of booleans
+
+    var poundOn = true;
+    
+    function delay(time) {
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
+      
+    function smoothScroll(object){
+        object.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    poundLogo.addEventListener("click", () => {
+        if (poundOn) {
+            pTopRight.classList.add("move-left");
+            pLeft.classList.add("move-left")
+            poundOn = false;
+        }
+        else {
+            pTopRight.classList.remove("move-left");
+            pLeft.classList.remove("move-left")
+            poundOn = true;
+        }
+    });
 
     function animate({timing, draw, duration}) {
 
@@ -182,8 +229,12 @@ window.onload = function() {
             if (!(id == "g_pencils" || id == "g_school")) {
                 elem.classList.add("invisible");
             }
+            // else {
+            //     elem.classList.add("onTop");
+            // }
         }
         mode = "school";
+        delay(200).then(() => smoothScroll(schoolContainer));
     }
 
     function closeSchool() {
@@ -193,11 +244,23 @@ window.onload = function() {
             if (!(id == "g_pencils" || id == "g_school")) {
                 elem.classList.remove("invisible");
             }
+            // else {
+            //     elem.classList.remove("onTop");
+            // }
         }
         mode = "main";
     }
 
     gPencils.addEventListener("click", () => {
+        if (mode == "school") {
+            closeSchool()
+        }
+        else if (mode == "main") {
+            openSchool()
+        }
+    });
+    
+    gSchool.addEventListener("click", () => {
         if (mode == "school") {
             closeSchool()
         }
@@ -217,6 +280,7 @@ window.onload = function() {
             }
         }
         mode = "work";
+        delay(200).then(() => smoothScroll(workContainer));
     }
 
     function closeWork() {
@@ -247,6 +311,15 @@ window.onload = function() {
             openWork()
         }
     });
+    
+    gWork.addEventListener("click", () => {
+        if (mode == "work") {
+            closeWork()
+        }
+        else if (mode == "main") {
+            openWork()
+        }
+    });
 
 
 
@@ -259,6 +332,7 @@ window.onload = function() {
             }
         }
         mode = "projects";
+        delay(200).then(() => smoothScroll(projectsContainer));
     }
 
     function closeProjects() {
@@ -273,6 +347,15 @@ window.onload = function() {
     }
 
     blueprint.addEventListener("click", () => {
+        if (mode == "projects") {
+            closeProjects()
+        }
+        else if (mode == "main") {
+            openProjects()
+        }
+    });
+    
+    gProjects.addEventListener("click", () => {
         if (mode == "projects") {
             closeProjects()
         }
@@ -297,7 +380,6 @@ window.onload = function() {
         contactContainer.classList.remove("container-off");
         for (const elem of allElements) {
             const id = elem.id;
-            // if (!(id == "g_phone" || id == "g_contact")) {
             if (!(id == "w_contact")) {
                 elem.classList.add("invisible");
             }
@@ -307,6 +389,10 @@ window.onload = function() {
             // }
         }
         mode = "contact";
+        
+        delay(200).then(() => smoothScroll(contactContainer));
+        // delay(600).then(() => borletti.style.color = "white");
+        // delay(600).then(() => navbar.style.backgroundColor = "white");
     }
 
     function closeContact() {
@@ -331,18 +417,14 @@ window.onload = function() {
             openContact()
         }
     });
-
-
-    projectsText.addEventListener("click", () => {
-
-    });
-
-    schoolText.addEventListener("click", () => {
-
-    });
     
-    workText.addEventListener("click", () => {
-
+    gContact.addEventListener("click", () => {
+        if (mode == "contact") {
+            closeContact()
+        }
+        else if (mode == "main") {
+            openContact()
+        }
     });
     
     toolbelt.addEventListener("mouseleave", () => {
@@ -350,4 +432,13 @@ window.onload = function() {
             returnTools();
         }
     });
+    
+    
+    // var placeholderForMobile = true;
+
+    // if (placeholderForMobile) {
+    //     while (mode == "main") {
+            
+    //     }
+    // }
 }

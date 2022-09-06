@@ -19,17 +19,28 @@
     --blue: #2F6DF6;
     --red: #BF436C;
     --gray: #505050;
+
+    --contact-bg: #232529;
+    --contact-lightgray: #6A6E78;
+
+    --school-bg: #f0f4fc;
+    
+    --work-bg: #ffe8e8;
+    
+    --projects-bg: #b5dbff;
+
     --bold-font: helveticaNeueBold;
     --regular-font: helveticaNeue;
     --thin-font: helveticaNeueThin;
 
-    --luca-fs: 38;
-    --sub-luca-fs: 38;
-    --category-fs: 38;
+    --luca-fs-pc: 34px;
+    --luca-fs-mobile: 23px;
+    --sub-luca-fs: 38px;
+    --category-fs: 38px;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////// DESCRIPTION //////////////////////////////////
+///////////////////////////////// HEADER & BODY ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
 body {
@@ -42,54 +53,120 @@ p, h1, span {
     margin: 0;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#header {
+    z-index: 999;
+    padding: 0;
+    margin: 0;
+    position:sticky;
+    top: 0;
+    // height: 10vh;
+
+    #header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        padding: 10px 50px 10px 50px;
+        height: 10vh;
+        // width: 100%;
+        box-sizing: border-box;
     
-    padding: 30px 50px 0 50px;
-    height: 10vh;
-    box-sizing: border-box;
-
-    .name {
-        user-select:none;
-        h1.luca {
-            letter-spacing: 0;
-            margin: 0;
-            padding: 0;
-            font-family: var(--bold-font);
-            font-size: 34px;
-            letter-spacing: 0.093em;
-
-            span.L-letter {
-                color: var(--yellow);
-            }
-            span.U-letter {
-                color: var(--green);
-            }
-            span.C-letter {
-                color: var(--blue);
-            }
-            span.A-letter {
-                color: var(--red);
-            }
-            span.BORLETTI {
-                font-family: var(--thin-font);
-                font-size: var(--luca-fs);
-                color: var(--gray);
+        transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    
+        // overflow: hidden;
+        // align-self: flex-start;
+    
+        .name {
+            user-select:none;
+            h1.luca {
+                margin: 0;
+                padding: 0;
+                font-family: var(--bold-font);
+                font-size: var(--luca-fs-mobile);
+                letter-spacing: 0.093em;
+    
+                span#L-letter {
+                    color: var(--yellow);
+                }
+                span#U-letter {
+                    color: var(--green);
+                }
+                span#C-letter {
+                    color: var(--blue);
+                }
+                span#A-letter {
+                    color: var(--red);
+                }
+                span#BORLETTI {
+                    font-family: var(--thin-font);
+                    color: var(--gray);
+                }
             }
         }
-    }
-    #pound-symbol {
-        height: 45px;
-        width: auto;
+        #pound-symbol {
+            height: 30px;
+            width: auto;
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+        }
     }
 }
 
-// #g_right:hover {
-    // transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
-    // transform: rotate(3deg);
-    // transform: translate(720.214px +1px, 434.458px +1px)
+#nav-menu {
+    width: 50%;
+    display: flex;
+    // justify-content: space-between;
+    // flex-direction: column;
+    // top: 0;
+    // right: 100%;
+    // position: absolute;
+
+    #nav-projects {
+        color: var(--yellow);
+        text-shadow: .5px .5px var(--contact-lightgray);
+        // color: var(--gray);
+        font-family: var(--thin-font);
+        font-size: var(--luca-fs-pc);
+        // font-size: 25px;
+        letter-spacing: 0.093em;
+        font-weight: bold;
+    }
+    
+    #nav-work {
+        color: var(--green);
+        text-shadow: .5px .5px var(--contact-lightgray);
+        // color: var(--gray);
+        font-family: var(--thin-font);
+        font-size: var(--luca-fs-pc);
+        // font-size: 25px;
+        letter-spacing: 0.093em;
+        font-weight: bold;
+    }
+    
+    #nav-school {
+        color: var(--blue);
+        text-shadow: .5px .5px var(--contact-lightgray);
+        // color: var(--gray);
+        font-family: var(--thin-font);
+        font-size: var(--luca-fs-pc);
+        // font-size: 25px;
+        letter-spacing: 0.093em;
+        font-weight: bold;
+    }
+    
+    #nav-contact {
+        color: var(--red);
+        text-shadow: .5px .5px var(--contact-lightgray);
+        // color: var(--gray);
+        font-family: var(--thin-font);
+        font-size: var(--luca-fs-pc);
+        // font-size: 25px;
+        letter-spacing: 0.093em;
+        font-weight: bold;
+    }
+}
+
+// #header:hover {
+//     height: 100vh;
 // }
 
 .drawing-container {
@@ -99,24 +176,32 @@ p, h1, span {
     align-items: center;
 }
 
+.move-left {
+    transform:translate(-10px, 0);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// SVG ///////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 svg#toolbelt {
     max-width: 80%;
-    // width: 50%;
     max-height: 90vh;
     height: auto;
 }
 
-
 g, path {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
+
+////////////////////////////// SVG "TOOL" ACTIVATION ///////////////////////////
 
 #g_pencil_1, #g_pencil_2, #g_bp, #g_wrench, #g_hammer, #g_phone {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
 #g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects, 
-#g_work, #g_phone, #g_contact {
+#g_work, #g_phone, #g_contact, #pound-symbol {
     cursor: pointer;
 }
 
@@ -175,6 +260,8 @@ g, path {
     transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
     filter: brightness(110%) saturate(140%);
 }
+
+////////////////////////////// SVG TEXT ACTIVATION /////////////////////////////
 
 .school_path_active {
     stroke-dasharray: 421.3840026855469;
@@ -263,6 +350,10 @@ g, path {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////// INFORMATION SECTIONS ////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 .invisible {
     // display:none;
     opacity: 0;
@@ -272,6 +363,10 @@ g, path {
 
 .visible {
     opacity: 1;
+}
+
+.onTop {
+    z-index: 999;
 }
 
 .container-off {
@@ -284,86 +379,192 @@ g, path {
     justify-content: space-between;
 }
 
-.move-contact {
-    transform: translate(-100px, 0px) !important;
+///////////////////////////// CONTACT CONTAINER ////////////////////////////////
+
+// .move-contact {
+//     transform: translate(-100px, 0px) !important;
     // transform: translate3d(-100px, 0px, 0px) !important;
+// }
+
+#contact-container {
+    min-height: 100vh;
+    background-color: var(--contact-bg);
+    #contact-rising-rectangles {
+        width: 100%;
+        // display: grid;
+        // grid;
+        // display: flex;
+        // flex-direction: row;
+        padding: 0;
+        margin: 0;
+        .rising-rectangle {
+            background-color: var(--contact-bg);
+        }
+
+        #rising-rectangle-1 {
+            left: 0;
+            width: 3%;
+            margin-top: -10rem;
+            height: 10rem;
+        }
+        #rising-rectangle-2 {
+            left: 0;
+            width: 3%;
+            margin-top: -10rem;
+            height: 10rem;
+        }
+        #rising-rectangle-3 {
+            left: 0;
+            width: 3%;
+            margin-top: -10rem;
+            height: 10rem;
+        }
+        #rising-rectangle-4 {
+            left: 0;
+            width: 3%;
+            margin-top: -10rem;
+            height: 10rem;
+        }
+    }
 }
 
+////////////////////////////// SCHOOL CONTAINER ////////////////////////////////
+
+#school-container {
+    min-height: 100vh;
+    background-color: var(--school-bg);
+}
+
+///////////////////////////////// WORK CONTAINER ///////////////////////////////
+
+#work-container {
+    min-height: 100vh;
+    background-color: var(--work-bg);
+}
+
+////////////////////////////// PROJECTS CONTAINER //////////////////////////////
+
+#projects-container {
+    min-height: 100vh;
+    background-color: var(--projects-bg);
+}
+
+.spacer {
+    height: 15vh;
+}
+
+ul.projects-list {
+    // display: flex;
+    padding: 0;
+    margin: 0;
+    width:90%;
+    align-self: center;
+    text-align: center;
+    
+    
+    li.projects-element {
+        text-align: left;
+        display:inline-block;
+        // margin: 1.5em auto 2em auto;
+        height: 25vw;
+        width: 40vw;
+        // vertical-align: bottom;
+        // vertical-align: bottom;
+        position: relative;
+        .projects-text {
+            padding: 1rem 3.5rem 1rem 1rem;
+            bottom: 0;
+            position: absolute;
+            width: 75%;
+            background-color: var(--projects-bg);
+            border-radius: 0 20px 0 0;
+            .projects-title {
+                font-family: var(--thin-font);
+                color: var(--gray);
+                font-size: var(--luca-fs-pc);
+                letter-spacing: 0.093em;
+            }
+            .projects-description {
+                font-family: var(--thin-font);
+                color: var(--gray);
+                // font-size: ;
+                // font-size: var(--luca-fs-pc);
+                letter-spacing: 0.093em;
+            }
+        }
+    }
+
+    #projects-clickshare {
+        background-image: url("../assets/info-sections/clickshare-bg.png");
+        // background-image: linear-gradient(var(--blue), var(--blue)), 
+        //     url("../assets/info-sections/clickshare-bg.png");
+        background-size:cover;
+        background-repeat: no-repeat;
+        // background-blend-mode: saturation;
+    }
+
+    #projects-xylo {
+        background-image: url("../assets/info-sections/xylo-bg.png");
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+
+    #projects-studynet {
+        background-image: url("../assets/info-sections/studynet-bg.png");
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+
+    #projects-portfolio {
+        background-image: url("../assets/info-sections/");
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+
+    // #projects-xylo {
+    //     background-image: ;
+    // }
+
+    // #projects-studynet {
+    //     background-image: ;
+    // }
+
+    // #projects-portfolio {
+    //     background-image: ;
+    // }
+
+}
 
 ////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////// >550 pixels //////////////////////////////////
+//////////////////////////// VIEWPORT DEPENDENT ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+@media only screen and (max-width: 1100px) and (min-width: 800px) {
+    svg#toolbelt {
+        width: 630px;
+    }
+}    
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 1100px) {
     svg#toolbelt {
         width: 50%;
     }
 }
 
+@media only screen and (min-width: 700px) {
+    #header {
+        #header-container {
+            .name {
+                h1.luca {
+                    font-size: var(--luca-fs-pc);
+                }
+            }
+            
+            #pound-symbol {
+                height: 45px;
+                width: auto;
+            }
+        }
+    }
 
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////// DEPRECATED ///////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-// .nameText {
-//     font-family: Arial;
-//     text-align:center;
-//     font-size: 2.5em;
-//     padding: 0;
-//     margin: 0;
-//     line-height: .35em;
-// }
-
-// .aboutText, .cmuText {
-//     font-family: Arial;
-//     text-align: center;
-// }
-
-// .cmuText {
-//     color:red;
-// }
-
-// .profileImage {
-//     width: 50px;
-//     height: 50px;
-//     border: 1 px solid black;
-// }
-
-// .background {
-//     width: 100%;
-//     height: 100%;
-//     margin: 0;
-// }
-
-// .navBar {
-//     width: 100%;
-//     height: 50px;
-//     margin: 0;
-//     align-self:center;
-// }
-
-// .navBar > .element {
-//     width: 32%;
-//     line-height: 50px;
-//     text-align: center;
-//     color: black;
-//     display: inline-block;
-//     margin: 0;
-//     font-family: Arial;
-//     font-size: 1em;
-//     text-decoration: none; 
-// }
-
-// .navBar > .element:hover { 
-//     text-decoration: underline;
-//     color: gray;
-// }
-
-// .navBar > .logo { 
-//     float: left;
-// }
-
-// // @media only screen and (min-width: 780px) {
-
-// // }
+}

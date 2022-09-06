@@ -9,38 +9,62 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="icon" href="assets/pound_logo_square_thick.png">
     <script src="./index_files/jquery.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </head>
 <body>
-    <nav class="header">
-        <div class="name">
-            <h1 class="luca">
-                <span class="L-letter">L</span><span class="U-letter">u</span><span class="C-letter">c</span><span class="A-letter">a</span><span class="BORLETTI"> Borletti</span>
-            </h1>
+    <nav id="header">
+        <div id="header-container">
+            <div class="name">
+                <h1 class="luca">
+                    <span id="L-letter">L</span><span id="U-letter">u</span><span id="C-letter">c</span><span id="A-letter">a</span><span id="BORLETTI"> Borletti</span>
+                    <!-- <span class="" id="age"></span> -->
+                </h1>
+            </div>
+    
+            <!-- <div id="nav-menu">
+                <span id="nav-projects">
+                    Projects
+                </span>
+                <span id="nav-work">
+                    Work
+                </span>
+                <span id="nav-school">
+                    School
+                </span>
+                <span id="nav-contact">
+                    Contact
+                </span>
+            </div> -->
+            <svg style='display:none' xmlns="http://www.w3.org/2000/svg" width="53.5" height="53.5" viewBox="0 0 53.5 53.5" id="pound-symbol">
+                <g id="g_pound" data-name="Group 1" transform="translate(-691 -421.129)">
+                    <g id="w_top_right">
+                        <g id="g_top_right" transform="translate(720.214 434.458)">
+                            <rect id="top_right" data-name="Rectangle 3" width="24.286" height="6.687" fill="#e9c645"/>
+                        </g>
+                    </g>
+                    <g id="w_right">
+                        <g id="g_right" transform="translate(-1436.079 -1164)">
+                            <path id="right" data-name="Path 1" d="M2167.258,1585.129h6.713l-13.422,53.5h-6.721Z" fill="#77b856"/>
+                        </g>
+                    </g>
+                    <g id="w_bottom">
+                        <g id="g_bottom" transform="translate(691 454.521)">
+                            <rect id="bottom" data-name="Rectangle 2" width="46.812" height="6.687" fill="#bf436c"/>
+                        </g>
+                    </g>
+                    <g id="w_left">
+                        <g id="g_left" transform="translate(-1456.222 -1164)">
+                            <path id="left" data-name="Path 2" d="M2167.258,1585.129h6.713l-13.422,53.5h-6.721Z" fill="#2f6df6"/>
+                        </g>
+                    </g>
+                    <g id="w_top_left">
+                        <g id="g_top_left" transform="translate(697.687 434.458)">
+                            <rect id="top_left" data-name="Rectangle 4" width="23.582" height="6.687" fill="#e9c645"/>
+                        </g>
+                    </g>
+                </g>
+            </svg>          
         </div>
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="264" height="45" viewBox="0 0 264 45">
-            <text id="Luca_Borletti" data-name="Luca Borletti" transform="translate(0 37)" fill="#e9c645" font-size="38" font-family="HelveticaNeue-Bold, Helvetica Neue" letter-spacing="0.093em" font-weight="700"><tspan x="0" y="0">L</tspan><tspan y="0" fill="#77b856">u</tspan><tspan y="0" fill="#2f6df6">c</tspan><tspan y="0" fill="#bf436c">a </tspan><tspan y="0" fill="#505050" font-family="HelveticaNeue, Helvetica Neue" font-weight="400">Borletti</tspan></text>
-          </svg> -->
-          
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="53.5" height="53.5" viewBox="0 0 53.5 53.5" id="pound-symbol">
-            <g id="Group_1" data-name="Group 1" transform="translate(-691 -421.129)">
-                <g id="g_top_right" transform="translate(720.214 434.458)">
-                    <rect id="top_right" data-name="Rectangle 3" width="24.286" height="6.687" fill="#e9c645"/>
-                </g>
-                <g id="g_right" transform="translate(-1436.079 -1164)">
-                    <path id="right" data-name="Path 1" d="M2167.258,1585.129h6.713l-13.422,53.5h-6.721Z" fill="#77b856"/>
-                </g>
-                <g id="g_bottom" transform="translate(691 454.521)">
-                    <rect id="bottom" data-name="Rectangle 2" width="46.812" height="6.687" fill="#bf436c"/>
-                </g>
-                <g id="g_left" transform="translate(-1456.222 -1164)">
-                    <path id="left" data-name="Path 2" d="M2167.258,1585.129h6.713l-13.422,53.5h-6.721Z" fill="#2f6df6"/>
-                </g>
-                <g id="g_top_left" transform="translate(697.687 434.458)">
-                    <rect id="top_left" data-name="Rectangle 4" width="23.582" height="6.687" fill="#e9c645"/>
-                </g>
-            </g>
-        </svg>          
     </nav>
     
     <div class="drawing-container">
@@ -245,51 +269,169 @@
     </div>
 
     <div id="school-container" class="container-off">
-        <li class="school-element">
-        <br> Carnegie Mellon University
-        <br> Pittsburgh, PA
-        <br> August 2021 - Present
-        <br> Major in Computer Science and Machine Learning. Class of 2025. Fall 2021 & Spring 2022 SCS Dean’s List.
-        </li>
+        <!-- <ul class="school-list">
+            <li class="school-element" id="school-cmu">
+                <div class="school-image"></div>
 
-        <li class="school-element">
-        <br> The American School Foundation of Monterrey
-        <br> Monterrey, MX
-        <br> August 2018 - June 2021
-        <br> 2019, 2020, & 2021 Honor Role. Completed native-level Spanish literature courses. 1560 SAT (800 Math, 760 EBRW). 
-        </li>
+                <div class="school-text">
+                    <br> Carnegie Mellon University
+                    <br> Pittsburgh, PA
+                    <br> August 2021 - Present
+                    <br> Major in Computer Science and Machine Learning. Class of 2025. Fall 2021 & Spring 2022 SCS Dean’s List.
+                </div>
+            </li>
 
-        <li class="school-element">
-        <br> Harvard University Pre-College
-        <br> Boston, MA
-        <br> Summer 2019
-        <br> Took Intro to Programming, Comp. Sci., and Data Viz. Used Python and orbital mechanics to create virtual reality planetary models
-        </li>
+            <li class="school-element" id="school-asfm">
+                <div class="school-image"></div>
+                    
+                <div class="school-text">
+                    <br> The American School Foundation of Monterrey
+                    <br> Monterrey, MX
+                    <br> August 2018 - June 2021
+                    <br> 2019, 2020, & 2021 Honor Role. Completed native-level Spanish literature courses. 1560 SAT (800 Math, 760 EBRW). 
+                </div>
+            </li>
 
-        <li class="school-element">
-        <br> Cornell School of Continuing Education
-        <br> Ithaca, NY
-        <br> Summer 2020
-        <br> Big Data for Big Policy Problems. Used the R programming language to wrangle, interpret, and visualize data regarding social policy issues in housing, criminal justice, and public health. Created policy briefs informed by these statistical analyses.
-    </di</li>
-    v>
+            <li class="school-element" id="school-harvard">
+                <div class="school-image"></div>
+                    
+                <div class="school-text">
+                    <br> Harvard University Pre-College
+                    <br> Boston, MA
+                    <br> Summer 2019
+                    <br> Took Intro to Programming, Comp. Sci., and Data Viz. Used Python and orbital mechanics to create virtual reality planetary models
+                </div>
+            </li>
+
+            <li class="school-element" id="school-cornell">
+                <div class="school-image"></div>
+
+                <div class="school-text">
+                    <br> Cornell School of Continuing Education
+                    <br> Ithaca, NY
+                    <br> Summer 2020
+                    <br> Big Data for Big Policy Problems. Used the R programming language to wrangle, interpret, and visualize data regarding social policy issues in housing, criminal justice, and public health. Created policy briefs informed by these statistical analyses.
+                </div>
+            </li>
+        </ul> -->
+
+    </div>
 
     <div id="work-container" class="container-off">
-        
+        <!-- <ul class="work-list">
+            <li class="work-element" id="work-gallus">
+                <div class="work-image"></div>
+
+                <div class="school-text">
+                    <br> Carnegie Mellon University
+                    <br> Pittsburgh, PA
+                    <br> August 2021 - Present
+                    <br> Major in Computer Science and Machine Learning. Class of 2025. Fall 2021 & Spring 2022 SCS Dean’s List.
+                </div>
+            </li>
+
+            <li class="school-element" id="school-asfm">
+                <div class="school-image"></div>
+                    
+                <div class="school-text">
+                    <br> The American School Foundation of Monterrey
+                    <br> Monterrey, MX
+                    <br> August 2018 - June 2021
+                    <br> 2019, 2020, & 2021 Honor Role. Completed native-level Spanish literature courses. 1560 SAT (800 Math, 760 EBRW). 
+                </div>
+            </li>
+
+            <li class="school-element" id="school-harvard">
+                <div class="school-image"></div>
+                    
+                <div class="school-text">
+                    <br> Harvard University Pre-College
+                    <br> Boston, MA
+                    <br> Summer 2019
+                    <br> Took Intro to Programming, Comp. Sci., and Data Viz. Used Python and orbital mechanics to create virtual reality planetary models
+                </div>
+            </li>
+
+            <li class="school-element" id="school-cornell">
+                <div class="school-image"></div>
+
+                <div class="school-text">
+                    <br> Cornell School of Continuing Education
+                    <br> Ithaca, NY
+                    <br> Summer 2020
+                    <br> Big Data for Big Policy Problems. Used the R programming language to wrangle, interpret, and visualize data regarding social policy issues in housing, criminal justice, and public health. Created policy briefs informed by these statistical analyses.
+                </div>
+            </li>
+        </ul> -->
     </div>
 
     <div id="projects-container" class="container-off">
-        
+        <div class="spacer"></div>
+        <ul class="projects-list">
+            <li class="projects-element" id="projects-clickshare">
+                <div class="projects-text">
+                    <h1 class="projects-title">
+                        ClickShare
+                        <!-- ClickShare Videoconferencer -->
+                    </h1>
+                    <p class="projects-description">
+                        <!-- Easy-to-use videotelephony service with student-geared screen-sharing and annotation capabilities -->
+                        An easy-to-use videoconferencing web app with student-geared screen-annotation
+                    </p>
+                </div>
+            </li>
+
+            <li class="projects-element" id="projects-xylo">
+                <div class="projects-text">
+                    <h1 class="projects-title">
+                        Xylo
+                    </h1>
+                    <p class="projects-description">
+                        A xylophone-themed scheduling app including an event-interleaving algorithm 
+                        <!-- and Google Calendar import system  -->
+                    </p>
+                </div>
+            </li>
+
+            <li class="projects-element" id="projects-studynet">
+                <div class="projects-text">
+                    <h1 class="projects-title">
+                        StudyNet
+                    </h1>
+                    <p class="projects-description">
+                        A study group pairing service that uses a fully-connected neural network to link students
+                    </p>
+                </div>
+            </li>
+
+            <li class="projects-element" id="projects-portfolio">
+                <div class="projects-text">
+                    <h1 class="projects-title">
+                        Luca's Portfolio
+                    </h1>
+                    <p class="projects-description">
+                        The website you are looking at right now! 
+                        <br>
+                        So many SVG's
+                    </p>
+                </div>
+            </li>
+        </ul>
     </div>
 
     <div id="contact-container" class="container-off">
-        
-    </div>
-    <!-- <div class="text-container" style="display:none">
-        
-    </div> -->
+        <div id="contact-rising-rectangles">
+            <div id="rr-1" class="rising-rectangle"></div>
+            <div id="rr-2" class="rising-rectangle"></div>
+            <div id="rr-3" class="rising-rectangle"></div>
+            <div id="rr-4" class="rising-rectangle"></div>
+            <div id="rr-5" class="rising-rectangle"></div>
+            <div id="rr-6" class="rising-rectangle"></div>
+        </div>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> -->
+
+    </div>
+
     <script src="index_files/index.js"></script>
 </body>
 </html>

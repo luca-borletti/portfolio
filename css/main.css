@@ -19,12 +19,18 @@
   --blue: #2F6DF6;
   --red: #BF436C;
   --gray: #505050;
+  --contact-bg: #232529;
+  --contact-lightgray: #6A6E78;
+  --school-bg: #f0f4fc;
+  --work-bg: #ffe8e8;
+  --projects-bg: #b5dbff;
   --bold-font: helveticaNeueBold;
   --regular-font: helveticaNeue;
   --thin-font: helveticaNeueThin;
-  --luca-fs: 38;
-  --sub-luca-fs: 38;
-  --category-fs: 38;
+  --luca-fs-pc: 34px;
+  --luca-fs-mobile: 23px;
+  --sub-luca-fs: 38px;
+  --category-fs: 38px;
 }
 
 body {
@@ -37,7 +43,16 @@ p, h1, span {
   margin: 0;
 }
 
-.header {
+#header {
+  z-index: 999;
+  padding: 0;
+  margin: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#header #header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,53 +62,98 @@ p, h1, span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 50px 0 50px;
+  padding: 10px 50px 10px 50px;
   height: 10vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
-.header .name {
+#header #header-container .name {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
-.header .name h1.luca {
-  letter-spacing: 0;
+#header #header-container .name h1.luca {
   margin: 0;
   padding: 0;
   font-family: var(--bold-font);
-  font-size: 34px;
+  font-size: var(--luca-fs-mobile);
   letter-spacing: 0.093em;
 }
 
-.header .name h1.luca span.L-letter {
+#header #header-container .name h1.luca span#L-letter {
   color: var(--yellow);
 }
 
-.header .name h1.luca span.U-letter {
+#header #header-container .name h1.luca span#U-letter {
   color: var(--green);
 }
 
-.header .name h1.luca span.C-letter {
+#header #header-container .name h1.luca span#C-letter {
   color: var(--blue);
 }
 
-.header .name h1.luca span.A-letter {
+#header #header-container .name h1.luca span#A-letter {
   color: var(--red);
 }
 
-.header .name h1.luca span.BORLETTI {
+#header #header-container .name h1.luca span#BORLETTI {
   font-family: var(--thin-font);
-  font-size: var(--luca-fs);
   color: var(--gray);
 }
 
-.header #pound-symbol {
-  height: 45px;
+#header #header-container #pound-symbol {
+  height: 30px;
   width: auto;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+}
+
+#nav-menu {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#nav-menu #nav-projects {
+  color: var(--yellow);
+  text-shadow: 0.5px 0.5px var(--contact-lightgray);
+  font-family: var(--thin-font);
+  font-size: var(--luca-fs-pc);
+  letter-spacing: 0.093em;
+  font-weight: bold;
+}
+
+#nav-menu #nav-work {
+  color: var(--green);
+  text-shadow: 0.5px 0.5px var(--contact-lightgray);
+  font-family: var(--thin-font);
+  font-size: var(--luca-fs-pc);
+  letter-spacing: 0.093em;
+  font-weight: bold;
+}
+
+#nav-menu #nav-school {
+  color: var(--blue);
+  text-shadow: 0.5px 0.5px var(--contact-lightgray);
+  font-family: var(--thin-font);
+  font-size: var(--luca-fs-pc);
+  letter-spacing: 0.093em;
+  font-weight: bold;
+}
+
+#nav-menu #nav-contact {
+  color: var(--red);
+  text-shadow: 0.5px 0.5px var(--contact-lightgray);
+  font-family: var(--thin-font);
+  font-size: var(--luca-fs-pc);
+  letter-spacing: 0.093em;
+  font-weight: bold;
 }
 
 .drawing-container {
@@ -107,6 +167,11 @@ p, h1, span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.move-left {
+  -webkit-transform: translate(-10px, 0);
+          transform: translate(-10px, 0);
 }
 
 svg#toolbelt {
@@ -126,7 +191,7 @@ g, path {
 }
 
 #g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects,
-#g_work, #g_phone, #g_contact {
+#g_work, #g_phone, #g_contact, #pound-symbol {
   cursor: pointer;
 }
 
@@ -326,6 +391,10 @@ g, path {
   opacity: 1;
 }
 
+.onTop {
+  z-index: 999;
+}
+
 .container-off {
   display: none !important;
 }
@@ -343,14 +412,151 @@ g, path {
           justify-content: space-between;
 }
 
-.move-contact {
-  -webkit-transform: translate(-100px, 0px) !important;
-          transform: translate(-100px, 0px) !important;
+#contact-container {
+  min-height: 100vh;
+  background-color: var(--contact-bg);
 }
 
-@media only screen and (min-width: 550px) {
+#contact-container #contact-rising-rectangles {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#contact-container #contact-rising-rectangles .rising-rectangle {
+  background-color: var(--contact-bg);
+}
+
+#contact-container #contact-rising-rectangles #rising-rectangle-1 {
+  left: 0;
+  width: 3%;
+  margin-top: -10rem;
+  height: 10rem;
+}
+
+#contact-container #contact-rising-rectangles #rising-rectangle-2 {
+  left: 0;
+  width: 3%;
+  margin-top: -10rem;
+  height: 10rem;
+}
+
+#contact-container #contact-rising-rectangles #rising-rectangle-3 {
+  left: 0;
+  width: 3%;
+  margin-top: -10rem;
+  height: 10rem;
+}
+
+#contact-container #contact-rising-rectangles #rising-rectangle-4 {
+  left: 0;
+  width: 3%;
+  margin-top: -10rem;
+  height: 10rem;
+}
+
+#school-container {
+  min-height: 100vh;
+  background-color: var(--school-bg);
+}
+
+#work-container {
+  min-height: 100vh;
+  background-color: var(--work-bg);
+}
+
+#projects-container {
+  min-height: 100vh;
+  background-color: var(--projects-bg);
+}
+
+.spacer {
+  height: 15vh;
+}
+
+ul.projects-list {
+  padding: 0;
+  margin: 0;
+  width: 90%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+}
+
+ul.projects-list li.projects-element {
+  text-align: left;
+  display: inline-block;
+  height: 25vw;
+  width: 40vw;
+  position: relative;
+}
+
+ul.projects-list li.projects-element .projects-text {
+  padding: 1rem 3.5rem 1rem 1rem;
+  bottom: 0;
+  position: absolute;
+  width: 75%;
+  background-color: var(--projects-bg);
+  border-radius: 0 20px 0 0;
+}
+
+ul.projects-list li.projects-element .projects-text .projects-title {
+  font-family: var(--thin-font);
+  color: var(--gray);
+  font-size: var(--luca-fs-pc);
+  letter-spacing: 0.093em;
+}
+
+ul.projects-list li.projects-element .projects-text .projects-description {
+  font-family: var(--thin-font);
+  color: var(--gray);
+  letter-spacing: 0.093em;
+}
+
+ul.projects-list #projects-clickshare {
+  background-image: url("../assets/info-sections/clickshare-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ul.projects-list #projects-xylo {
+  background-image: url("../assets/info-sections/xylo-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ul.projects-list #projects-studynet {
+  background-image: url("../assets/info-sections/studynet-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ul.projects-list #projects-portfolio {
+  background-image: url("../assets/info-sections/");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 800px) {
+  svg#toolbelt {
+    width: 630px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
   svg#toolbelt {
     width: 50%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #header #header-container .name h1.luca {
+    font-size: var(--luca-fs-pc);
+  }
+  #header #header-container #pound-symbol {
+    height: 45px;
+    width: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */
