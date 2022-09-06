@@ -31,6 +31,8 @@
   --luca-fs-mobile: 23px;
   --sub-luca-fs: 38px;
   --category-fs: 38px;
+  --projects-title-fs-mobile: 23px;
+  --projects-desc-fs-mobile: 18px;
 }
 
 body {
@@ -175,7 +177,7 @@ p, h1, span {
 }
 
 svg#toolbelt {
-  max-width: 80%;
+  max-width: 90%;
   max-height: 90vh;
   height: auto;
 }
@@ -399,19 +401,6 @@ g, path {
   display: none !important;
 }
 
-#school-container, #work-container, #projects-container, #contact-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 #contact-container {
   min-height: 100vh;
   background-color: var(--contact-bg);
@@ -468,10 +457,21 @@ g, path {
 #projects-container {
   min-height: 100vh;
   background-color: var(--projects-bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .spacer {
   height: 15vh;
+  width: 100%;
 }
 
 ul.projects-list {
@@ -487,8 +487,9 @@ ul.projects-list {
 ul.projects-list li.projects-element {
   text-align: left;
   display: inline-block;
-  height: 25vw;
-  width: 40vw;
+  height: 230px;
+  width: 380px;
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -497,20 +498,21 @@ ul.projects-list li.projects-element .projects-text {
   bottom: 0;
   position: absolute;
   width: 75%;
-  background-color: var(--projects-bg);
+  background-color: rgba(46, 53, 61, 0.5);
   border-radius: 0 20px 0 0;
 }
 
 ul.projects-list li.projects-element .projects-text .projects-title {
   font-family: var(--thin-font);
-  color: var(--gray);
-  font-size: var(--luca-fs-pc);
+  color: var(--yellow);
+  font-size: var(--projects-title-fs-mobile);
   letter-spacing: 0.093em;
 }
 
 ul.projects-list li.projects-element .projects-text .projects-description {
   font-family: var(--thin-font);
-  color: var(--gray);
+  color: var(--yellow);
+  font-size: var(--projects-desc-fs-mobile);
   letter-spacing: 0.093em;
 }
 
@@ -533,7 +535,7 @@ ul.projects-list #projects-studynet {
 }
 
 ul.projects-list #projects-portfolio {
-  background-image: url("../assets/info-sections/");
+  background-image: url("../assets/info-sections/portfolio-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -547,6 +549,14 @@ ul.projects-list #projects-portfolio {
 @media only screen and (min-width: 1100px) {
   svg#toolbelt {
     width: 50%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  ul.projects-list li.projects-element {
+    height: 350px;
+    width: 600px;
+    margin-bottom: 0px;
   }
 }
 

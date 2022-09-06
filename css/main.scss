@@ -37,6 +37,9 @@
     --luca-fs-mobile: 23px;
     --sub-luca-fs: 38px;
     --category-fs: 38px;
+
+    --projects-title-fs-mobile: 23px;
+    --projects-desc-fs-mobile: 18px;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -185,7 +188,7 @@ p, h1, span {
 ////////////////////////////////////////////////////////////////////////////////
 
 svg#toolbelt {
-    max-width: 80%;
+    max-width: 90%;
     max-height: 90vh;
     height: auto;
 }
@@ -373,11 +376,11 @@ g, path {
     display: none !important;
 }
 
-#school-container, #work-container, #projects-container, #contact-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+// #school-container, #work-container, #projects-container, #contact-container {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+// }
 
 ///////////////////////////// CONTACT CONTAINER ////////////////////////////////
 
@@ -447,10 +450,15 @@ g, path {
 #projects-container {
     min-height: 100vh;
     background-color: var(--projects-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
 }
 
 .spacer {
     height: 15vh;
+    width: 100%;
 }
 
 ul.projects-list {
@@ -466,8 +474,10 @@ ul.projects-list {
         text-align: left;
         display:inline-block;
         // margin: 1.5em auto 2em auto;
-        height: 25vw;
-        width: 40vw;
+        // height: 25vw;
+        height: 230px;
+        width: 380px;
+        margin-bottom: 20px;
         // vertical-align: bottom;
         // vertical-align: bottom;
         position: relative;
@@ -476,19 +486,26 @@ ul.projects-list {
             bottom: 0;
             position: absolute;
             width: 75%;
-            background-color: var(--projects-bg);
+            // background-color: var(--projects-bg);
+            // background-color: rgba(50, 139, 249, 0.5);
+            background-color: rgba(46, 53, 61, 0.5);
             border-radius: 0 20px 0 0;
             .projects-title {
                 font-family: var(--thin-font);
-                color: var(--gray);
-                font-size: var(--luca-fs-pc);
+                // color: var(--gray);
+                // color: white;
+                color: var(--yellow);
+                font-size: var(--projects-title-fs-mobile);
                 letter-spacing: 0.093em;
             }
             .projects-description {
                 font-family: var(--thin-font);
-                color: var(--gray);
+                // color: var(--gray);
+                // color: white;
+                color: var(--yellow);
                 // font-size: ;
                 // font-size: var(--luca-fs-pc);
+                font-size: var(--projects-desc-fs-mobile);
                 letter-spacing: 0.093em;
             }
         }
@@ -516,7 +533,7 @@ ul.projects-list {
     }
 
     #projects-portfolio {
-        background-image: url("../assets/info-sections/");
+        background-image: url("../assets/info-sections/portfolio-bg.png");
         background-size:cover;
         background-repeat: no-repeat;
     }
@@ -550,6 +567,17 @@ ul.projects-list {
         width: 50%;
     }
 }
+
+@media only screen and (min-width: 800px) {
+    ul.projects-list {
+        li.projects-element {
+                height: 350px;
+                width: 600px;
+                margin-bottom: 0px;
+        }
+    }
+}
+
 
 @media only screen and (min-width: 700px) {
     #header {

@@ -51,7 +51,9 @@ window.onload = function() {
             ageEl.innerText = time.toString().substring(0, 12);
         }, 50);
     }
-        
+    
+    var hasHovered = false;
+
     var mode = "main"; // "main" || "school" || "work" || "projects" || "contact"
     // either have a null variable or a bunch of booleans
 
@@ -434,6 +436,20 @@ window.onload = function() {
     });
     
     
+    toolLoopIdx = 0;
+    toolLoopList = [hoverSchool, hoverProjects, hoverWork, hoverContact];
+    
+    var loopTools = window.setInterval(loopCallback, 3000);
+
+    function loopCallback() {
+        toolLoopList[toolLoopIdx]();
+        toolLoopIdx = (toolLoopIdx + 1) % 4;
+    }
+    toolbelt.addEventListener("mouseenter", () => {
+        hasHovered = true;
+        window.clearInterval(loopTools);
+    });
+
     // var placeholderForMobile = true;
 
     // if (placeholderForMobile) {
