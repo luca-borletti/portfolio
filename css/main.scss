@@ -150,7 +150,7 @@ h1 {
     // background: blue;
     // color: white;
     text-decoration: none;
-    padding: .5em 1.2em;
+    // padding: .5em 1.2em;
     font-size: var(--epithet-fs-mobile);
     border-radius: 5px;
     // font-weight: bold;
@@ -366,23 +366,25 @@ g, path {
     cursor: pointer;
 }
 
-.pencil_1_active {
+.pencil_1_active, #g_pencil_1:hover {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
     -webkit-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
     -ms-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
     -moz-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
     -o-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
     transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+    // transform-origin: center center;
     filter: brightness(110%) saturate(140%);
 }
 
-.pencil_2_active {
+.pencil_2_active, #g_pencil_2:hover {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
     -webkit-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
     -ms-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
     -moz-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
     -o-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
     transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+    // transform-origin: center center;
     filter: brightness(110%) saturate(140%); 
 }
 .blueprint_active {

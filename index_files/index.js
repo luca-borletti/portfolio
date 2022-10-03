@@ -141,8 +141,8 @@ window.onload = function() {
         hover = "school";
         returnTools();
         gSchool.style.display = "unset";
-        pencil1.classList.add("pencil_1_active");
-        pencil2.classList.add("pencil_2_active");
+        // pencil1.classList.add("pencil_1_active");
+        // pencil2.classList.add("pencil_2_active");
         
         schoolPath.classList.remove("school_path_inactive");
         schoolPath.classList.add("school_path_active");
