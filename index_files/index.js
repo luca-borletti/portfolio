@@ -54,6 +54,8 @@ window.onload = function() {
     
     var hasHovered = false;
 
+    var hover = "main";
+
     var mode = "main"; // "main" || "school" || "work" || "projects" || "contact"
     // either have a null variable or a bunch of booleans
 
@@ -127,10 +129,16 @@ window.onload = function() {
             workText.classList.add("work_text_inactive");
             schoolText.classList.add("school_text_inactive");
             contactText.classList.add("contact_text_inactive");
+
+            gSchool.style.display = "none";
+            gWork.style.display = "none";
+            gProjects.style.display = "none";
+            gContact.style.display = "none";
     }
 
 
     function hoverSchool() {
+        hover = "school";
         returnTools();
         gSchool.style.display = "unset";
         pencil1.classList.add("pencil_1_active");
@@ -149,6 +157,7 @@ window.onload = function() {
     });
 
     function hoverProjects() {
+        hover = "projects";
         returnTools();
         gProjects.style.display = "unset";
 
@@ -167,6 +176,7 @@ window.onload = function() {
     });
 
     function hoverWork() {
+        hover = "work";
         returnTools();
         gWork.style.display = "unset";
 
@@ -194,6 +204,7 @@ window.onload = function() {
     });
 
     function hoverContact() {
+        hover = "contact";
         returnTools();
         gContact.style.display = "unset";
 
@@ -225,6 +236,7 @@ window.onload = function() {
     
     
     function openSchool() {
+        delay(1000).then(() => toolbelt.classList.add('scale-belt-school'));
         schoolContainer.classList.remove("container-off");
         for (const elem of allElements) {
             const id = elem.id;
@@ -240,6 +252,7 @@ window.onload = function() {
     }
 
     function closeSchool() {
+        toolbelt.classList.remove('scale-belt-school');
         schoolContainer.classList.add("container-off");
         for (const elem of allElements) {
             const id = elem.id;
@@ -266,7 +279,7 @@ window.onload = function() {
         if (mode == "school") {
             closeSchool()
         }
-        else if (mode == "main") {
+        else if (mode == "main" && hover == "school") {
             openSchool()
         }
     });
@@ -274,6 +287,7 @@ window.onload = function() {
 
 
     function openWork() {
+        delay(1000).then(() => toolbelt.classList.add('scale-belt-work'));
         workContainer.classList.remove("container-off");
         for (const elem of allElements) {
             const id = elem.id;
@@ -286,6 +300,7 @@ window.onload = function() {
     }
 
     function closeWork() {
+        toolbelt.classList.remove('scale-belt-work');
         workContainer.classList.add("container-off");
         for (const elem of allElements) {
             const id = elem.id;
@@ -318,7 +333,7 @@ window.onload = function() {
         if (mode == "work") {
             closeWork()
         }
-        else if (mode == "main") {
+        else if (mode == "main" && hover == "work") {
             openWork()
         }
     });
@@ -326,6 +341,7 @@ window.onload = function() {
 
 
     function openProjects() {
+        delay(1000).then(() => toolbelt.classList.add('scale-belt-projects'));
         projectsContainer.classList.remove("container-off");
         for (const elem of allElements) {
             const id = elem.id;
@@ -338,6 +354,7 @@ window.onload = function() {
     }
 
     function closeProjects() {
+        toolbelt.classList.remove('scale-belt-projects');
         projectsContainer.classList.add("container-off");
         for (const elem of allElements) {
             const id = elem.id;
@@ -361,7 +378,7 @@ window.onload = function() {
         if (mode == "projects") {
             closeProjects()
         }
-        else if (mode == "main") {
+        else if (mode == "main" && hover == "projects") {
             openProjects()
         }
     });
@@ -379,6 +396,7 @@ window.onload = function() {
       };  
 
     function openContact() {
+        delay(1000).then(() => toolbelt.classList.add('scale-belt-contact'));
         contactContainer.classList.remove("container-off");
         for (const elem of allElements) {
             const id = elem.id;
@@ -398,6 +416,7 @@ window.onload = function() {
     }
 
     function closeContact() {
+        toolbelt.classList.remove('scale-belt-contact');
         contactContainer.classList.add("container-off");
         for (const elem of allElements) {
             const id = elem.id;
@@ -424,30 +443,43 @@ window.onload = function() {
         if (mode == "contact") {
             closeContact()
         }
-        else if (mode == "main") {
+        else if (mode == "main" && hover == "contact") {
             openContact()
         }
     });
     
     toolbelt.addEventListener("mouseleave", () => {
         if (mode == "main") {
+            hover = "";
             returnTools();
         }
     });
     
-    
+
+    // time stuff
+
+
+
     toolLoopIdx = 0;
     toolLoopList = [hoverSchool, hoverProjects, hoverWork, hoverContact];
     
-    var loopTools = window.setInterval(loopCallback, 3000);
+    var loopTools = window.setInterval(loopCallback, 2500);
+
+    // var loopTools;
+
+    // var loopToolsFunc = delay(5000).then(() => loopTools = window.setInterval(loopCallback, 1000));
+
+    // loopToolsFunc();
 
     function loopCallback() {
         toolLoopList[toolLoopIdx]();
         toolLoopIdx = (toolLoopIdx + 1) % 4;
     }
+    
     toolbelt.addEventListener("mouseenter", () => {
         hasHovered = true;
         window.clearInterval(loopTools);
+        // window.clearInterval(loopToolsFunc);
     });
 
     // var placeholderForMobile = true;

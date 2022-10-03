@@ -33,10 +33,19 @@
     --regular-font: helveticaNeue;
     --thin-font: helveticaNeueThin;
 
-    --luca-fs-pc: 34px;
-    --luca-fs-mobile: 23px;
+    --luca-fs-pc: 40px;
+    --luca-fs-mobile: 30px;
     --sub-luca-fs: 38px;
     --category-fs: 38px;
+
+    --epithet-fs-pc: 30px;
+    --epithet-fs-mobile: 23px;
+    
+    --section-title-fs-pc: 30px;
+    --section-title-fs-mobile: 23px;
+
+    --age-fs-pc: 30px;
+    --age-fs-mobile: 18px;
 
     --projects-title-fs-mobile: 23px;
     --projects-desc-fs-mobile: 18px;
@@ -45,6 +54,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// HEADER & BODY ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 body {
     padding: 0;
@@ -56,20 +70,27 @@ p, h1, span {
     margin: 0;
 }
 
+h1 {
+    font-family: var(--thin-font);
+    font-size: var(--luca-fs-mobile);
+    color: var(--gray);
+}
+
 #header {
     z-index: 999;
     padding: 0;
     margin: 0;
-    position:sticky;
+    // position:sticky;
     top: 0;
     // height: 10vh;
 
     #header-container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        
-        padding: 10px 50px 10px 50px;
+        // align-items: center;
+        max-width: 90%;
+        margin: 0 auto;
+        // padding: 10px 50px 10px 50px;
         height: 10vh;
         // width: 100%;
         box-sizing: border-box;
@@ -78,40 +99,156 @@ p, h1, span {
     
         // overflow: hidden;
         // align-self: flex-start;
-    
-        .name {
-            user-select:none;
-            h1.luca {
-                margin: 0;
-                padding: 0;
-                font-family: var(--bold-font);
-                font-size: var(--luca-fs-mobile);
-                letter-spacing: 0.093em;
-    
-                span#L-letter {
-                    color: var(--yellow);
-                }
-                span#U-letter {
-                    color: var(--green);
-                }
-                span#C-letter {
-                    color: var(--blue);
-                }
-                span#A-letter {
-                    color: var(--red);
-                }
-                span#BORLETTI {
-                    font-family: var(--thin-font);
-                    color: var(--gray);
+        .nav-text {
+            margin: 2vh 0 0 0;
+            padding: 0;
+            #epithet {
+                margin-top: 2%;
+                font-size: var(--epithet-fs-mobile);
+                font-family: var(--thin-font);
+                color: var(--gray);
+            }
+            #name {
+                // align-self: center;
+                user-select:none;
+                h1.luca {
+                    margin: 0;
+                    padding: 0;
+                    font-family: var(--bold-font);
+                    font-size: var(--luca-fs-mobile);
+                    letter-spacing: 0.093em;
+        
+                    span#L-letter {
+                        color: var(--yellow);
+                    }
+                    span#U-letter {
+                        color: var(--green);
+                    }
+                    span#C-letter {
+                        color: var(--blue);
+                    }
+                    span#A-letter {
+                        color: var(--red);
+                    }
+                    span#BORLETTI {
+                        font-family: var(--thin-font);
+                        color: var(--gray);
+                    }
                 }
             }
         }
         #pound-symbol {
+            display:none;
             height: 30px;
             width: auto;
             transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
         }
     }
+}
+
+#home {
+    // background: blue;
+    // color: white;
+    text-decoration: none;
+    padding: .5em 1.2em;
+    font-size: var(--epithet-fs-mobile);
+    border-radius: 5px;
+    // font-weight: bold;
+    display: inline-block;
+    position:absolute;
+    bottom: 5%;
+    left: 5%;
+    margin: 0;
+    transition: all 0.4s ease 0s;
+
+    p {
+        margin: 0;
+    }
+    // transition: all .5s ease-in-out;
+    // display: flex;
+    // border: 5px none var(--primary-blue);
+    // outline: 5px none var(--primary-blue);
+    span {
+        display: inline-block;
+        position: relative;
+        transition: 0.2s;
+        // font-size: 2em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    span:after {
+        content: '\00bb';
+        // position: absolute;
+        opacity: 0;
+        // top: 0;
+        // right: -20px;
+        transition: 0.2s;
+        display: none;
+    }
+
+
+
+    &:hover {
+        // transition: all .5s ease-in-out;
+        // border: 5px solid var(--primary-blue);
+        transition: all 0.4s ease 0s;
+        outline: 1px solid var(--primary-blue);
+        color: var(--primary-blue);
+        // font-weight:200;
+        // border-width: thick;
+        background: white;
+        
+        span {
+            padding-left: 15px;
+        }
+        span:after {
+            opacity: 1;
+            right: 0;
+            display: unset;
+        }
+    }
+}
+
+#github:hover {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    // transform: scale(1.01);
+    // transform-origin:center center;
+    filter: brightness(110%) saturate(140%);
+}
+
+#holder {
+    display: none;
+}
+
+// #link-container {
+//     .link-logo {
+//         width: 18vw;
+//         height: 18vw;
+//     }
+//     display: flex;
+//     flex-direction: column;
+
+// }
+
+#links_belt {
+    margin: 2vh 0 0 0;
+    // margin-top: 2vh !important;
+    max-width: 20vw;
+    max-height: 16vh;
+}
+
+#text-bar {
+    display: none;
+}
+#text-comma {
+    display: unset;
+}
+
+.age {
+    font-family: var(--thin-font);
+    color: var(--gray);
+    letter-spacing: 0.093em;
+    font-size: var(--age-fs-pc);
 }
 
 #nav-menu {
@@ -188,9 +325,10 @@ p, h1, span {
 ////////////////////////////////////////////////////////////////////////////////
 
 svg#toolbelt {
-    max-width: 90%;
+    max-width: 95%;
     max-height: 90vh;
     height: auto;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
 g, path {
@@ -198,6 +336,26 @@ g, path {
 }
 
 ////////////////////////////// SVG "TOOL" ACTIVATION ///////////////////////////
+
+.scale-belt-school {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    transform: scale(1.2) translate(15%, 5%);
+}
+
+.scale-belt-projects {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    transform: scale(1.2) translate(0, 15%);
+}
+
+.scale-belt-work {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    transform: scale(1.2) translate(-20%, 10%);
+}
+
+.scale-belt-contact {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    transform: scale(1.2) translate(15%, 0);
+}
 
 #g_pencil_1, #g_pencil_2, #g_bp, #g_wrench, #g_hammer, #g_phone {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
@@ -454,6 +612,19 @@ g, path {
     flex-direction: column;
     align-items: center;
     // justify-content: center;
+    .title-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        height: 15vh;
+        vertical-align: middle;
+        h1 {
+            line-height: 15vh;
+        }
+    //     .title {
+    //         font-size: var(--section-title-fs-mobile);
+            
+    //     }
+    }
 }
 
 .spacer {
@@ -461,55 +632,60 @@ g, path {
     width: 100%;
 }
 
-ul.projects-list {
-    // display: flex;
-    padding: 0;
-    margin: 0;
-    width:90%;
-    align-self: center;
-    text-align: center;
-    
-    
-    li.projects-element {
-        text-align: left;
-        display:inline-block;
-        // margin: 1.5em auto 2em auto;
-        // height: 25vw;
-        height: 230px;
-        width: 380px;
-        margin-bottom: 20px;
-        // vertical-align: bottom;
-        // vertical-align: bottom;
-        position: relative;
-        .projects-text {
-            padding: 1rem 3.5rem 1rem 1rem;
-            bottom: 0;
-            position: absolute;
-            width: 75%;
-            // background-color: var(--projects-bg);
-            // background-color: rgba(50, 139, 249, 0.5);
-            background-color: rgba(46, 53, 61, 0.5);
-            border-radius: 0 20px 0 0;
-            .projects-title {
-                font-family: var(--thin-font);
-                // color: var(--gray);
-                // color: white;
-                color: var(--yellow);
-                font-size: var(--projects-title-fs-mobile);
-                letter-spacing: 0.093em;
-            }
-            .projects-description {
-                font-family: var(--thin-font);
-                // color: var(--gray);
-                // color: white;
-                color: var(--yellow);
-                // font-size: ;
-                // font-size: var(--luca-fs-pc);
-                font-size: var(--projects-desc-fs-mobile);
-                letter-spacing: 0.093em;
+.projects-grid {
+    .projects-row {
+        // display: flex;
+        // display: flex;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        // flex-direction: row;
+        .projects-element {
+            text-align: left;
+            display:inline-block;
+            height: 230px;
+            width: 380px;
+            margin-bottom: 20px;
+            
+            position: relative;
+            .projects-text {
+                transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                user-select: none;
+                padding: 1rem 3.5rem 1rem 1rem;
+                bottom: 0;
+                // top: 75%;
+                // top: 0;
+                position: absolute;
+                display:inline-block;
+                width: 75%;
+                
+                background-color: rgba(61, 133, 197, 0.7);
+                border-radius: 0 20px 0 0;
+                // border-radius: 0 0 20px 0;
+                .projects-title {
+                    font-family: var(--regular-font);
+                    color: white;
+                    font-size: var(--projects-title-fs-mobile);
+                    letter-spacing: 0.093em;
+                }
+                .projects-description {
+                    margin-top: 5px;
+                    font-family: var(--thin-font);
+                    color: white;
+                    font-size: var(--projects-desc-fs-mobile);
+                    letter-spacing: 0.093em;
+                    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                }
             }
         }
     }
+
+    // .projects-element:hover {
+    //     .projects-text {
+    //         .projects-description {
+    //         }
+    //     }
+    // }
 
     #projects-clickshare {
         background-image: url("../assets/info-sections/clickshare-bg.png");
@@ -538,19 +714,132 @@ ul.projects-list {
         background-repeat: no-repeat;
     }
 
-    // #projects-xylo {
-    //     background-image: ;
-    // }
-
-    // #projects-studynet {
-    //     background-image: ;
-    // }
-
-    // #projects-portfolio {
-    //     background-image: ;
-    // }
+    #projects-pointandprove {
+        background-image: url("../assets/info-sections/pointandprove-bg.png");
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
 
 }
+
+// ul.projects-list {
+//     // display: flex;
+//     padding: 0;
+//     margin: 0 0 40px 0;
+//     width:90%;
+//     align-self: center;
+//     text-align: center;
+    
+    
+//     li.projects-element {
+//         text-align: left;
+//         display:inline-block;
+//         // margin: 1.5em auto 2em auto;
+//         // height: 25vw;
+//         height: 230px;
+//         width: 380px;
+//         margin-bottom: 20px;
+//         // vertical-align: bottom;
+//         // vertical-align: bottom;
+//         position: relative;
+//         .projects-text {
+//             user-select: none;
+//             padding: 1rem 3.5rem 1rem 1rem;
+//             bottom: 0;
+//             position: absolute;
+//             width: 75%;
+//             // background-color: var(--projects-bg);
+//             // background-color: rgba(50, 139, 249, 0.5);
+//             // background-color: rgba(46, 53, 61, 0.5);
+//             background-color: rgba(61, 133, 197, 0.7);
+//             border-radius: 0 20px 0 0;
+//             .projects-title {
+//                 font-family: var(--regular-font);
+//                 // color: var(--gray);
+//                 // color: white;
+//                 color: white;
+//                 // color: var(--yellow);
+//                 font-size: var(--projects-title-fs-mobile);
+//                 letter-spacing: 0.093em;
+//             }
+//             .projects-description {
+//                 margin-top: 5px;
+//                 font-family: var(--thin-font);
+//                 // color: var(--gray);
+//                 // color: white;
+//                 color: white;
+//                 // color: var(--yellow);
+//                 // font-size: ;
+//                 // font-size: var(--luca-fs-pc);
+//                 font-size: var(--projects-desc-fs-mobile);
+//                 letter-spacing: 0.093em;
+//                 transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+//                 opacity: 0;
+//                 height: 20px;
+//                 overflow: hidden;
+//                 overflow-y: hidden;
+//                 // overscroll-behavior: none;
+//             }
+//             // overflow-y: hidden;
+//             // overflow: hidden;
+//             // overscroll-behavior: none;
+//             // .projects-description {
+//             // }
+//         }
+//         // overflow-y: hidden;
+//         // overscroll-behavior: none;
+//     }
+
+//     li.projects-element:hover {
+//         .projects-text {
+//             .projects-description {
+//                 opacity: 1;
+//                 height: 50px;
+//                 overflow-y: hidden;
+//             }
+//         }
+//     }
+
+//     #projects-clickshare {
+//         background-image: url("../assets/info-sections/clickshare-bg.png");
+//         // background-image: linear-gradient(var(--blue), var(--blue)), 
+//         //     url("../assets/info-sections/clickshare-bg.png");
+//         background-size:cover;
+//         background-repeat: no-repeat;
+//         // background-blend-mode: saturation;
+//     }
+
+//     #projects-xylo {
+//         background-image: url("../assets/info-sections/xylo-bg.png");
+//         background-size:cover;
+//         background-repeat: no-repeat;
+//     }
+
+//     #projects-studynet {
+//         background-image: url("../assets/info-sections/studynet-bg.png");
+//         background-size:cover;
+//         background-repeat: no-repeat;
+//     }
+
+//     #projects-portfolio {
+//         background-image: url("../assets/info-sections/portfolio-bg.png");
+//         background-size:cover;
+//         background-repeat: no-repeat;
+//     }
+
+//     // #projects-xylo {
+//     //     background-image: ;
+//     // }
+
+//     // #projects-studynet {
+//     //     background-image: ;
+//     // }
+
+//     // #projects-portfolio {
+//     //     background-image: ;
+//     // }
+
+// }
 
 ////////////////////////////////////////////////////////////////////////////////
 //////////////////////////// VIEWPORT DEPENDENT ////////////////////////////////
@@ -568,31 +857,106 @@ ul.projects-list {
     }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (max-width: 450px) {
     ul.projects-list {
         li.projects-element {
-                height: 350px;
-                width: 600px;
-                margin-bottom: 0px;
+            height: 190px;
+            width: 320px;
         }
     }
+}
+
+@media only screen and (min-width: 800px) {
+    // ul.projects-list {
+    //     li.projects-element {
+    //             height: 350px;
+    //             width: 600px;
+    //             // margin-bottom: 0px;
+    //             margin: 6px;
+    //     }
+    // }
+    .projects-grid {
+        margin-bottom: 5%;
+        .projects-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .projects-element {
+                    height: 350px;
+                    width: 600px;
+                    // margin-bottom: 0px;
+                    margin: 10px;
+                    .projects-text {
+                        top: 75%;
+                        .projects-description {
+                            opacity: 0;
+                            height: 0;
+                        }
+                    }
+            }
+            .projects-element:hover {
+                .projects-text {
+                    top: 65%;
+                    .projects-description {
+                        opacity: 1;
+                        height: 50px;
+                        overflow-y: hidden;
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 
 @media only screen and (min-width: 700px) {
     #header {
         #header-container {
-            .name {
-                h1.luca {
-                    font-size: var(--luca-fs-pc);
+            .nav-text {
+                #name {
+                    h1.luca {
+                        font-size: var(--luca-fs-pc);
+                    }
+                }
+                #epithet {
+                    margin-top: 5px;
+                    font-size: var(--epithet-fs-pc);
                 }
             }
             
             #pound-symbol {
                 height: 45px;
                 width: auto;
+                margin: auto 0;
             }
         }
     }
+    #links_belt {
+        max-height: 24vh !important;
+    }
 
+    #text-bar {
+        display: unset;
+    }
+    #text-comma {
+        display: none;
+    }
+
+
+    .scale-belt-school {
+        transform: translate(15%, 5%);
+    }
+    
+    .scale-belt-projects {
+        transform: translate(0, 15%);
+    }
+    
+    .scale-belt-work {
+        transform: translate(-20%, 10%);
+    }
+    
+    .scale-belt-contact {
+        transform: translate(15%, 0);
+    }
 }
