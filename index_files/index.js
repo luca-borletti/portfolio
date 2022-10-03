@@ -271,6 +271,24 @@ window.onload = function() {
         mode = "main";
     }
 
+    // gPencils.addEventListener("touchend", () => {
+    //     if (mode == "school") {
+    //         closeSchool()
+    //     }
+    //     else if (mode == "main") {
+    //         openSchool()
+    //     }
+    // });
+
+    // gSchool.addEventListener("touchend", () => {
+    //     if (mode == "school") {
+    //         closeSchool()
+    //     }
+    //     else if (mode == "main" && hover == "school") {
+    //         openSchool()
+    //     }
+    // });
+
     gPencils.addEventListener("click", () => {
         if (mode == "school") {
             closeSchool()
@@ -279,7 +297,7 @@ window.onload = function() {
             openSchool()
         }
     });
-    
+
     gSchool.addEventListener("click", () => {
         if (mode == "school") {
             closeSchool()
@@ -316,6 +334,30 @@ window.onload = function() {
         mode = "main";
     }
 
+    // wrench.addEventListener("touchend", () => {
+    //     if (mode == "work") {
+    //         closeWork()
+    //     }
+    //     else if (mode == "main") {
+    //         openWork()
+    //     }
+    // });
+    // hammer.addEventListener("touchend", () => {
+    //     if (mode == "work") {
+    //         closeWork()
+    //     }
+    //     else if (mode == "main") {
+    //         openWork()
+    //     }
+    // });
+    // gWork.addEventListener("touchend", () => {
+    //     if (mode == "work") {
+    //         closeWork()
+    //     }
+    //     else if (mode == "main" && hover == "work") {
+    //         openWork()
+    //     }
+    // });
     wrench.addEventListener("click", () => {
         if (mode == "work") {
             closeWork()
@@ -324,7 +366,6 @@ window.onload = function() {
             openWork()
         }
     });
-
     hammer.addEventListener("click", () => {
         if (mode == "work") {
             closeWork()
@@ -333,7 +374,6 @@ window.onload = function() {
             openWork()
         }
     });
-    
     gWork.addEventListener("click", () => {
         if (mode == "work") {
             closeWork()
@@ -370,6 +410,23 @@ window.onload = function() {
         mode = "main";
     }
 
+    // blueprint.addEventListener("touchend", () => {
+    //     if (mode == "projects") {
+    //         closeProjects()
+    //     }
+    //     else if (mode == "main") {
+    //         openProjects()
+    //     }
+    // });
+    
+    // gProjects.addEventListener("touchend", () => {
+    //     if (mode == "projects") {
+    //         closeProjects()
+    //     }
+    //     else if (mode == "main" && hover == "projects") {
+    //         openProjects()
+    //     }
+    // });
     blueprint.addEventListener("click", () => {
         if (mode == "projects") {
             closeProjects()
@@ -435,6 +492,23 @@ window.onload = function() {
         mode = "main";
     }
 
+    // phone.addEventListener("touchend", () => {
+    //     if (mode == "contact") {
+    //         closeContact()
+    //     }
+    //     else if (mode == "main") {
+    //         openContact()
+    //     }
+    // });
+    
+    // gContact.addEventListener("touchend", () => {
+    //     if (mode == "contact") {
+    //         closeContact()
+    //     }
+    //     else if (mode == "main" && hover == "contact") {
+    //         openContact()
+    //     }
+    // });
     phone.addEventListener("click", () => {
         if (mode == "contact") {
             closeContact()

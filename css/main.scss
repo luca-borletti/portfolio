@@ -55,6 +55,10 @@
 ///////////////////////////////// HEADER & BODY ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+body{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 ::selection {
     // background: var(--yellow) !important;
     // background: rgb(237, 195, 137, 0.5) !important;
@@ -216,7 +220,41 @@ h1 {
     }
 }
 
-#github:hover {
+// #w-goback {
+//     background-color: rgb(0, 0, 0);
+//     /* Fallback color */
+//     background-color: rgba(0, 0, 0, 0.2);
+//     /* Black w/opacity/see-through */
+//     border: 3px solid;
+// }
+
+// .goback {
+//     text-align: center;
+//     text-decoration: underline;
+//     font-size: 32px;
+//     font-family: monospace;
+//     letter-spacing: 5px;
+// }
+// .gobackanimated {
+//     background: linear-gradient(to right, var(--yellow),  var(--green), var(--blue), var(--red));
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     color: transparent;
+//     animation: rainbow_animation 6s ease-in-out infinite;
+//     background-size: 400% 100%;
+// }
+
+// @keyframes rainbow_animation {
+//     0%,100% {
+//         background-position: 0 0;
+//     }
+
+//     50% {
+//         background-position: 100% 0;
+//     }
+// }
+
+#github:hover, #linkedin:hover {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
     // transform: scale(1.01);
     // transform-origin:center center;
@@ -590,6 +628,7 @@ g, path {
     opacity: 0;
     user-select: none;
     cursor: default !important;
+    pointer-events: none;
 }
 
 .visible {

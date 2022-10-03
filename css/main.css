@@ -39,6 +39,10 @@
   --projects-desc-fs-mobile: 18px;
 }
 
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 ::-moz-selection {
   background: rgba(233, 198, 69, 0.5) !important;
 }
@@ -164,7 +168,7 @@ h1 {
   display: unset;
 }
 
-#github:hover {
+#github:hover, #linkedin:hover {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   filter: brightness(110%) saturate(140%);
 }
@@ -454,6 +458,7 @@ g, path {
       -ms-user-select: none;
           user-select: none;
   cursor: default !important;
+  pointer-events: none;
 }
 
 .visible {
