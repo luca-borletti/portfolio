@@ -55,6 +55,13 @@
 ///////////////////////////////// HEADER & BODY ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+::selection {
+    // background: var(--yellow) !important;
+    // background: rgb(237, 195, 137, 0.5) !important;
+    // background: rgb(146, 93, 177, 0.3) !important;
+    background: rgb(233, 198, 69, 0.5) !important;
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -110,7 +117,7 @@ h1 {
             }
             #name {
                 // align-self: center;
-                user-select:none;
+                // user-select:none;
                 h1.luca {
                     margin: 0;
                     padding: 0;
@@ -420,11 +427,11 @@ g, path {
 }
 .phone_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
-    -webkit-transform: translate(80px, -70px) rotate( 7deg);
-    -ms-transform: translate(80px, -70px) rotate( 7deg);
-    -moz-transform: translate(80px, -70px) rotate( 7deg);
-    -o-transform: translate(80px, -70px) rotate( 7deg);
-    transform: translate(80px, -70px) rotate( 7deg);
+    -webkit-transform: translate(70px, -60px) rotate( 7deg);
+    -ms-transform: translate(70px, -60px) rotate( 7deg);
+    -moz-transform: translate(70px, -60px) rotate( 7deg);
+    -o-transform: translate(70px, -60px) rotate( 7deg);
+    transform: translate(70px, -60px) rotate( 7deg);
     filter: brightness(110%) saturate(140%);
     transform-origin: center;
 }
@@ -713,7 +720,7 @@ g, path {
             position: relative;
             .projects-text {
                 transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-                user-select: none;
+                // user-select: none;
                 padding: 1rem 3.5rem 1rem 1rem;
                 bottom: 0;
                 // top: 75%;

@@ -39,6 +39,14 @@
   --projects-desc-fs-mobile: 18px;
 }
 
+::-moz-selection {
+  background: rgba(233, 198, 69, 0.5) !important;
+}
+
+::selection {
+  background: rgba(233, 198, 69, 0.5) !important;
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -84,12 +92,6 @@ h1 {
   font-size: var(--epithet-fs-mobile);
   font-family: var(--thin-font);
   color: var(--gray);
-}
-#header #header-container .nav-text #name {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 #header #header-container .nav-text #name h1.luca {
   margin: 0;
@@ -317,7 +319,7 @@ g, path {
 
 .phone_active {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-  transform: translate(80px, -70px) rotate(7deg);
+  transform: translate(70px, -60px) rotate(7deg);
   filter: brightness(110%) saturate(140%);
   transform-origin: center;
 }
@@ -550,10 +552,6 @@ g, path {
 }
 .projects-grid .projects-row .projects-element .projects-text {
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   padding: 1rem 3.5rem 1rem 1rem;
   bottom: 0;
   position: absolute;
