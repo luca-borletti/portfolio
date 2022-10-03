@@ -280,40 +280,46 @@ g, path {
   cursor: pointer;
 }
 
-.pencil_1_active, #g_pencil_1:hover {
+.pencil_1_active {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-  transform: translate(171.853px, 258.93px) rotate(2deg);
+  transform: translate(0px, -60px) rotate(2deg);
   filter: brightness(110%) saturate(140%);
+  transform-origin: center;
 }
 
-.pencil_2_active, #g_pencil_2:hover {
+.pencil_2_active {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-  transform: translate(234.343px, 293.865px) rotate(3deg);
+  transform: translate(8px, -45px) rotate(2deg);
   filter: brightness(110%) saturate(140%);
+  transform-origin: center;
 }
 
 .blueprint_active {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-  transform: translate(493.038px, 284.28px) rotate(-5deg);
+  transform: translate(0px, -50px) rotate(-3deg);
   filter: brightness(110%) saturate(140%);
+  transform-origin: center;
 }
 
 .hammer_active {
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-  transform: translate(680.738px, 256.905px) rotate(-5deg);
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  transform: translate(-5px, -40px) rotate(-4deg);
   filter: brightness(110%) saturate(140%);
+  transform-origin: center;
 }
 
 .wrench_active {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-  transform: translate(862.317px, 305.937px) rotate(5deg);
+  transform: translate(15px, -55px) rotate(3deg);
   filter: brightness(110%) saturate(140%);
+  transform-origin: center;
 }
 
 .phone_active {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-  transform: translate(292.398px, 693.332px) rotate(-144deg);
+  transform: translate(80px, -70px) rotate(7deg);
   filter: brightness(110%) saturate(140%);
+  transform-origin: center;
 }
 
 .school_path_active {

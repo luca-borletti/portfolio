@@ -366,63 +366,124 @@ g, path {
     cursor: pointer;
 }
 
-.pencil_1_active, #g_pencil_1:hover {
+
+.pencil_1_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
-    -webkit-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
-    -ms-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
-    -moz-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
-    -o-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
-    transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
-    // transform-origin: center center;
+    -webkit-transform: translate(0px, -60px) rotate(2deg);
+    -ms-transform: translate(0px, -60px) rotate(2deg);
+    -moz-transform: translate(0px, -60px) rotate(2deg);
+    -o-transform: translate(0px, -60px) rotate(2deg);
+    transform: translate(0px, -60px) rotate(2deg);
     filter: brightness(110%) saturate(140%);
+    transform-origin: center;
 }
 
-.pencil_2_active, #g_pencil_2:hover {
+.pencil_2_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
-    -webkit-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
-    -ms-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
-    -moz-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
-    -o-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
-    transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
-    // transform-origin: center center;
+    -webkit-transform: translate(8px, -45px) rotate(2deg);
+    -ms-transform: translate(8px, -45px) rotate(2deg);
+    -moz-transform: translate(8px, -45px) rotate(2deg);
+    -o-transform: translate(8px, -45px) rotate(2deg);
+    transform: translate(8px, -45px) rotate(2deg);
     filter: brightness(110%) saturate(140%); 
+    transform-origin: center;
 }
 .blueprint_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
-    -webkit-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
-    -ms-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
-    -moz-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
-    -o-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
-    transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+    -webkit-transform: translate(-0px, -50px) rotate(-3deg);
+    -ms-transform: translate(-0px, -50px) rotate(-3deg);
+    -moz-transform: translate(-0px, -50px) rotate(-3deg);
+    -o-transform: translate(-0px, -50px) rotate(-3deg);
+    transform: translate(-0px, -50px) rotate(-3deg);
     filter: brightness(110%) saturate(140%); 
+    transform-origin: center;
 }
 .hammer_active {
-    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
-    -webkit-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
-    -ms-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
-    -moz-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
-    -o-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
-    transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    -webkit-transform: translate(-5px, -40px) rotate(-4deg);
+    -ms-transform: translate(-5px, -40px) rotate(-4deg);
+    -moz-transform: translate(-5px, -40px) rotate(-4deg);
+    -o-transform: translate(-5px, -40px) rotate(-4deg);
+    transform: translate(-5px, -40px) rotate(-4deg);
     filter: brightness(110%) saturate(140%); 
+    transform-origin: center;
 }
 .wrench_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
-    -webkit-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
-    -ms-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
-    -moz-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
-    -o-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
-    transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+    -webkit-transform: translate(15px, -55px) rotate(3deg);
+    -ms-transform: translate(15px, -55px) rotate(3deg);
+    -moz-transform: translate(15px, -55px) rotate(3deg);
+    -o-transform: translate(15px, -55px) rotate(3deg);
+    transform: translate(15px, -55px) rotate(3deg);
     filter: brightness(110%) saturate(140%); 
+    transform-origin: center;
 }
 .phone_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
-    -webkit-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
-    -ms-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
-    -moz-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
-    -o-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
-    transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+    -webkit-transform: translate(80px, -70px) rotate( 7deg);
+    -ms-transform: translate(80px, -70px) rotate( 7deg);
+    -moz-transform: translate(80px, -70px) rotate( 7deg);
+    -o-transform: translate(80px, -70px) rotate( 7deg);
+    transform: translate(80px, -70px) rotate( 7deg);
     filter: brightness(110%) saturate(140%);
+    transform-origin: center;
 }
+
+// .pencil_1_active {
+//     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+//     -webkit-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+//     -ms-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+//     -moz-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+//     -o-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+//     transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+//     filter: brightness(110%) saturate(140%);
+// }
+
+// .pencil_2_active {
+//     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+//     -webkit-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+//     -ms-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+//     -moz-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+//     -o-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+//     transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+//     filter: brightness(110%) saturate(140%); 
+// }
+// .blueprint_active {
+//     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+//     -webkit-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+//     -ms-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+//     -moz-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+//     -o-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+//     transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+//     filter: brightness(110%) saturate(140%); 
+// }
+// .hammer_active {
+//     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+//     -webkit-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+//     -ms-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+//     -moz-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+//     -o-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+//     transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+//     filter: brightness(110%) saturate(140%); 
+// }
+// .wrench_active {
+//     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+//     -webkit-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+//     -ms-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+//     -moz-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+//     -o-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+//     transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+//     filter: brightness(110%) saturate(140%); 
+// }
+// .phone_active {
+//     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+//     -webkit-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+//     -ms-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+//     -moz-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+//     -o-transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+//     transform: translate(272.398px + 20px, 773.332px + -80px) rotate(-151 + 7deg);
+//     filter: brightness(110%) saturate(140%);
+// }
 
 ////////////////////////////// SVG TEXT ACTIVATION /////////////////////////////
 

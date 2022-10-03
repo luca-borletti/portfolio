@@ -18,12 +18,12 @@ window.onload = function() {
     const allElements = toolbeltg.children;
 
     const gPencils = document.getElementById('g_pencils');
-    const pencil1 = document.getElementById('g_pencil_1');
-    const pencil2 = document.getElementById('g_pencil_2');
-    const blueprint = document.getElementById('g_bp');
-    const hammer = document.getElementById('g_hammer');
-    const wrench = document.getElementById('g_wrench');
-    const phone = document.getElementById('g_phone');
+    const pencil1 = document.getElementById('w_pencil_1');
+    const pencil2 = document.getElementById('w_pencil_2');
+    const blueprint = document.getElementById('w_bp');
+    const hammer = document.getElementById('w_hammer');
+    const wrench = document.getElementById('w_wrench');
+    const phone = document.getElementById('w_phone');
 
     const schoolPath = document.getElementById('school_path');
     const workPath = document.getElementById('work_path');
@@ -141,8 +141,8 @@ window.onload = function() {
         hover = "school";
         returnTools();
         gSchool.style.display = "unset";
-        // pencil1.classList.add("pencil_1_active");
-        // pencil2.classList.add("pencil_2_active");
+        pencil1.classList.add("pencil_1_active");
+        pencil2.classList.add("pencil_2_active");
         
         schoolPath.classList.remove("school_path_inactive");
         schoolPath.classList.add("school_path_active");
@@ -152,6 +152,7 @@ window.onload = function() {
 
     gPencils.addEventListener("mouseover", () => {
         if (mode == "main") {
+            stopLoop();
             hoverSchool();
         }
     });
@@ -171,6 +172,7 @@ window.onload = function() {
 
     blueprint.addEventListener("mouseover", () => {
         if (mode == "main") {
+            stopLoop();
             hoverProjects();
         }
     });
@@ -191,6 +193,7 @@ window.onload = function() {
 
     wrench.addEventListener("mouseover", () => {
         if (mode == "main") {
+            stopLoop();
             hoverWork();
         }
 
@@ -198,6 +201,7 @@ window.onload = function() {
 
     hammer.addEventListener("mouseover", () => {
         if (mode == "main") {
+            stopLoop();
             hoverWork();
         }
 
@@ -218,6 +222,7 @@ window.onload = function() {
 
     phone.addEventListener("mouseover", () => {
         if (mode == "main") {
+            stopLoop();
             hoverContact();
         }
     });
@@ -291,7 +296,7 @@ window.onload = function() {
         workContainer.classList.remove("container-off");
         for (const elem of allElements) {
             const id = elem.id;
-            if (!(id == "g_hammer" || id == "g_wrench" || id == "g_work")) {
+            if (!(id == "w_hammer" || id == "w_wrench" || id == "g_work")) {
                 elem.classList.add("invisible");
             }
         }
@@ -304,7 +309,7 @@ window.onload = function() {
         workContainer.classList.add("container-off");
         for (const elem of allElements) {
             const id = elem.id;
-            if (!(id == "g_hammer" || id == "g_wrench" || id == "g_work")) {
+            if (!(id == "w_hammer" || id == "w_wrench" || id == "g_work")) {
                 elem.classList.remove("invisible");
             }
         }
@@ -345,7 +350,7 @@ window.onload = function() {
         projectsContainer.classList.remove("container-off");
         for (const elem of allElements) {
             const id = elem.id;
-            if (!(id == "g_bp" || id == "g_projects")) {
+            if (!(id == "w_bp" || id == "g_projects")) {
                 elem.classList.add("invisible");
             }
         }
@@ -358,7 +363,7 @@ window.onload = function() {
         projectsContainer.classList.add("container-off");
         for (const elem of allElements) {
             const id = elem.id;
-            if (!(id == "g_bp" || id == "g_projects")) {
+            if (!(id == "w_bp" || id == "g_projects")) {
                 elem.classList.remove("invisible");
             }
         }
@@ -476,11 +481,18 @@ window.onload = function() {
         toolLoopIdx = (toolLoopIdx + 1) % 4;
     }
     
-    toolbelt.addEventListener("mouseenter", () => {
+    function stopLoop () {
+        if (!hasHovered) {
+            window.clearInterval(loopTools);
+        }
         hasHovered = true;
-        window.clearInterval(loopTools);
-        // window.clearInterval(loopToolsFunc);
-    });
+    }
+
+    // toolbelt.addEventListener("mouseenter", () => {
+    //     hasHovered = true;
+    //     window.clearInterval(loopTools);
+    //     // window.clearInterval(loopToolsFunc);
+    // });
 
     // var placeholderForMobile = true;
 
