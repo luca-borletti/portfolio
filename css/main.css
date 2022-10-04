@@ -72,6 +72,22 @@ h1 {
   color: var(--gray);
 }
 
+span#L-letter {
+  color: var(--yellow);
+}
+
+span#U-letter {
+  color: var(--green);
+}
+
+span#C-letter {
+  color: var(--blue);
+}
+
+span#A-letter {
+  color: var(--red);
+}
+
 #header {
   z-index: 999;
   padding: 0;
@@ -97,24 +113,15 @@ h1 {
   font-family: var(--thin-font);
   color: var(--gray);
 }
+#header #header-container .nav-text #name {
+  cursor: pointer;
+}
 #header #header-container .nav-text #name h1.luca {
   margin: 0;
   padding: 0;
   font-family: var(--bold-font);
   font-size: var(--luca-fs-mobile);
   letter-spacing: 0.093em;
-}
-#header #header-container .nav-text #name h1.luca span#L-letter {
-  color: var(--yellow);
-}
-#header #header-container .nav-text #name h1.luca span#U-letter {
-  color: var(--green);
-}
-#header #header-container .nav-text #name h1.luca span#C-letter {
-  color: var(--blue);
-}
-#header #header-container .nav-text #name h1.luca span#A-letter {
-  color: var(--red);
 }
 #header #header-container .nav-text #name h1.luca span#BORLETTI {
   font-family: var(--thin-font);
@@ -129,14 +136,17 @@ h1 {
 
 #home {
   text-decoration: none;
+  padding: 10px;
   font-size: var(--epithet-fs-mobile);
-  border-radius: 5px;
+  border-radius: 20px;
   display: inline-block;
   position: absolute;
   bottom: 5%;
   left: 5%;
   margin: 0;
-  transition: all 0.4s ease 0s;
+  color: var(--gray);
+  transition: all 0.5s ease-in-out;
+  border: 2.5px solid var(--gray);
 }
 #home p {
   margin: 0;
@@ -153,11 +163,57 @@ h1 {
   transition: 0.2s;
   display: none;
 }
+
+#back {
+  text-decoration: none;
+  padding: 10px;
+  font-size: var(--epithet-fs-mobile);
+  border-radius: 20px;
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  margin: 0;
+  color: var(--gray);
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#back p {
+  margin: 0;
+}
+#back span.back-text {
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#back span.back-text:after {
+  content: "home  ";
+  opacity: 0;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: none;
+}
+#back span.back-arrow {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#back:hover {
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: white;
+  background: var(--gray);
+}
+#back:hover span.back-text {
+  padding-right: 10px;
+}
+#back:hover span.back-text:after {
+  opacity: 1;
+  right: 0;
+  display: unset;
+}
+
 #home:hover {
-  transition: all 0.4s ease 0s;
-  outline: 1px solid var(--primary-blue);
-  color: var(--primary-blue);
-  background: white;
+  transition: all 0.5s ease-in-out;
+  color: white;
+  background: var(--gray);
 }
 #home:hover span {
   padding-left: 15px;
@@ -166,6 +222,64 @@ h1 {
   opacity: 1;
   right: 0;
   display: unset;
+}
+
+.home-btn-off {
+  left: -20% !important;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+}
+
+.anim-container {
+  font-size: var(--epithet-fs-mobile);
+  font-family: var(--regular-font);
+  letter-spacing: 0.073em;
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: var(--gray);
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+}
+.anim-container p {
+  margin: 0;
+  padding: 0 0 1.5px 0;
+}
+
+.underline-anim {
+  display: inline-block;
+  position: relative;
+  padding: 0.2em 0;
+  text-decoration: none;
+}
+
+.underline-anim::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300%;
+  border-radius: 3px;
+  height: 2.2px;
+  background-color: var(--gray);
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.underline-anim::after {
+  opacity: 1;
+  transform: translate3d(-200%, 0, 0);
+}
+
+.underline-anim:hover::after,
+.underline-anim:focus::after {
+  transform: translate3d(-67%, 0, 0);
+}
+
+#github, #linkedin {
+  cursor: pointer;
 }
 
 #github:hover, #linkedin:hover {
@@ -548,6 +662,7 @@ g, path {
   flex-direction: column;
 }
 .projects-grid .projects-row .projects-element {
+  cursor: pointer;
   text-align: left;
   display: inline-block;
   height: 230px;
@@ -684,5 +799,11 @@ g, path {
   }
   .scale-belt-contact {
     transform: translate(15%, 0);
+  }
+  .anim-container {
+    font-size: var(--epithet-fs-pc) !important;
+  }
+  .underline-anim::after {
+    height: 2.8px;
   }
 }/*# sourceMappingURL=main.css.map */

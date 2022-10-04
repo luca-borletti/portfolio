@@ -4,6 +4,7 @@ window.onload = function() {
     const cLetter = document.getElementById('C-letter'); 
     const aLetter = document.getElementById('A-letter'); 
     const borletti = document.getElementById('BORLETTI'); 
+    const name = document.getElementById('name'); 
     const navbar = document.getElementById('header'); 
 
     const poundLogo = document.getElementById('pound-symbol'); 
@@ -42,6 +43,16 @@ window.onload = function() {
     const workContainer = document.getElementById('work-container');
     const projectsContainer = document.getElementById('projects-container');
     const contactContainer = document.getElementById('contact-container');
+
+    const linkedin = document.getElementById('linkedin');
+    const github = document.getElementById('github');
+
+    const clickshare = document.getElementById('projects-clickshare');
+    const xylo = document.getElementById('projects-xylo');
+    const studynet = document.getElementById('projects-studynet');
+    const pointandprove = document.getElementById('projects-pointandprove');
+
+    const goHomeBtn = document.getElementById('gohome');
 
     let ageEl = document.getElementById("age");
 
@@ -135,7 +146,6 @@ window.onload = function() {
             gProjects.style.display = "none";
             gContact.style.display = "none";
     }
-
 
     function hoverSchool() {
         hover = "school";
@@ -241,6 +251,7 @@ window.onload = function() {
     
     
     function openSchool() {
+        goHomeBtn.classList.remove("home-btn-off");
         delay(1000).then(() => toolbelt.classList.add('scale-belt-school'));
         schoolContainer.classList.remove("container-off");
         for (const elem of allElements) {
@@ -257,6 +268,7 @@ window.onload = function() {
     }
 
     function closeSchool() {
+        goHomeBtn.classList.add("home-btn-off");
         toolbelt.classList.remove('scale-belt-school');
         schoolContainer.classList.add("container-off");
         for (const elem of allElements) {
@@ -310,6 +322,7 @@ window.onload = function() {
 
 
     function openWork() {
+        goHomeBtn.classList.remove("home-btn-off");
         delay(1000).then(() => toolbelt.classList.add('scale-belt-work'));
         workContainer.classList.remove("container-off");
         for (const elem of allElements) {
@@ -323,6 +336,7 @@ window.onload = function() {
     }
 
     function closeWork() {
+        goHomeBtn.classList.add("home-btn-off");
         toolbelt.classList.remove('scale-belt-work');
         workContainer.classList.add("container-off");
         for (const elem of allElements) {
@@ -386,6 +400,7 @@ window.onload = function() {
 
 
     function openProjects() {
+        goHomeBtn.classList.remove("home-btn-off");
         delay(1000).then(() => toolbelt.classList.add('scale-belt-projects'));
         projectsContainer.classList.remove("container-off");
         for (const elem of allElements) {
@@ -399,6 +414,7 @@ window.onload = function() {
     }
 
     function closeProjects() {
+        goHomeBtn.classList.add("home-btn-off");
         toolbelt.classList.remove('scale-belt-projects');
         projectsContainer.classList.add("container-off");
         for (const elem of allElements) {
@@ -458,6 +474,7 @@ window.onload = function() {
       };  
 
     function openContact() {
+        goHomeBtn.classList.remove("home-btn-off");
         delay(1000).then(() => toolbelt.classList.add('scale-belt-contact'));
         contactContainer.classList.remove("container-off");
         for (const elem of allElements) {
@@ -478,6 +495,7 @@ window.onload = function() {
     }
 
     function closeContact() {
+        goHomeBtn.classList.add("home-btn-off");
         toolbelt.classList.remove('scale-belt-contact');
         contactContainer.classList.add("container-off");
         for (const elem of allElements) {
@@ -560,6 +578,54 @@ window.onload = function() {
             window.clearInterval(loopTools);
         }
         hasHovered = true;
+    }
+
+    xylo.addEventListener("click", () => {
+        window.open("https://www.youtube.com/watch?v=XMbejw6Zr9w&feature=youtu.be&ab_channel=LucaBorletti", '_blank').focus();
+    });
+
+    studynet.addEventListener("click", () => {
+        window.open("https://devpost.com/software/studynet", '_blank').focus();
+    });
+    
+    clickshare.addEventListener("click", () => {
+        window.open("https://www.youtube.com/watch?v=TBaPf3226Hs&ab_channel=Jack", '_blank').focus();
+    });
+    
+    pointandprove.addEventListener("click", () => {
+        window.open("http://www.pointandprove.com/", '_blank').focus();
+    });
+
+    linkedin.addEventListener("click", () => {
+        window.open("https://www.linkedin.com/in/lucaborletti/", '_blank').focus();
+    });
+
+    github.addEventListener("click", () => {
+        window.open("https://github.com/luca-borletti", '_blank').focus();
+    });
+
+    goHomeBtn.addEventListener("click", () => {
+        goHome();
+    });
+
+    name.addEventListener("click", () => {
+        goHome();
+    });
+
+    function goHome() {
+        switch (mode) {
+            // case 'main'
+            case 'school':
+                closeSchool();
+            case 'work':
+                closeWork();
+            case 'projects':
+                closeProjects();
+            case 'contact':
+                closeContact();
+            // case 
+            // default:
+        }
     }
 
     // toolbelt.addEventListener("mouseenter", () => {
