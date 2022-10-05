@@ -293,7 +293,7 @@ span#A-letter {
 .home-btn-off {
     // margin-right: -100% !important;
     // display: none !important;
-    left: -20% !important;
+    left: -30% !important;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
@@ -847,7 +847,7 @@ g, path {
 
 #school-container {
     .school-list {
-        padding-top: 5%;
+        padding: 5% 0;
         .school-element {
             // height: 60vw;
             height: 80vh;
@@ -914,20 +914,24 @@ g, path {
 
 #work-container {
     min-height: 100vh;
-    background-color: var(--work-bg);
+    // background-color: var(--work-bg);
+    background-image: url("../assets/work-images/brick-tile.png");
+    background-repeat: repeat;
 }
 
 #work-container {
     .work-list {
-        padding-top: 5%;
+        // padding-top: 5%;
+        padding: 3% 0 4% 0;
         .work-element {
             // height: 60vw;
-            height: 120vh;
+            // height: 120vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             // width: 80vw;
             .work-card {
+                margin: 8% 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -935,15 +939,16 @@ g, path {
                 // background-color: var(--work-bg);
                 border-radius: 10px;
                 // height: 50vw;
-                width: 80vw;
-                max-width: 70vh;
+                width: 70vw;
+                // max-width: 70vh;
                 // height: 60vh;
-                max-height: 90vh;
+                // height: 90vh;
                 padding: 20px;
                 // background-color: var(--work-bg);
 
                 .work-image {
-                    max-height: 50%;
+                    // max-height: 50%;
+                    max-height: 25vw;
                     max-width: 100%;
                     // margin: 0 auto;
                     object-fit:contain;
@@ -966,23 +971,6 @@ g, path {
                 background-color: var(--gray);
             }
         }
-
-        #work-gallus {
-            .work-card {
-                .work-image {
-                    height: 30%;
-                    // width: 
-                }
-            }
-        }
-
-        #work-fundusol {
-
-        }
-
-        #work-codellege {
-            height: 80vh;
-        }
     }
 }
 
@@ -994,7 +982,8 @@ g, path {
     min-height: 100vh;
     // background-color: var(--projects-bg);
     
-    background-color: rgb(29, 104, 162, .9);
+    background-color: rgba(13, 130, 219, 0.5);
+    // background-color: rgb(29, 104, 162, .9);
     background-image:
       linear-gradient(rgba(255,255,255,.5) 2px, transparent 2px),
       linear-gradient(90deg, rgba(255,255,255,.5) 2px, transparent 2px),
@@ -1043,9 +1032,9 @@ g, path {
             text-align: left;
             display:inline-block;
             // height: 230px;
-            height: 50vw;
+            height: 60vw;
             // width: 380px;
-            width: 80vw;
+            width: 90vw;
             margin-bottom: 8vw;
             
             position: relative;
@@ -1377,6 +1366,47 @@ g, path {
                 }
             }
         }
+    }
+
+    .work-element {
+        .work-card {
+            margin: 2% 0 !important;
+            width: 80vw !important;
+            max-width: 70vh !important;
+            // height: 60vh;
+            height: 90vh !important;
+            padding: 20px;
+            // background-color: var(--work-bg);
+
+            .work-image {
+                max-height: 50%;
+                max-width: 100%;
+                object-fit:contain;
+            }
+        }
+    }
+
+    #work-gallus {
+        .work-card {
+            .work-image {
+                height: 30% !important;
+                // width: 
+            }
+            margin-right: 10% !important;
+        }
+    }
+
+    #work-fundusol {
+        .work-card {
+            margin-right: -10% !important;
+        }
+    }
+
+    #work-codellege {
+        .work-card {
+            margin-right: 10% !important;
+        }
+        height: 80vh !important;
     }
 }
 

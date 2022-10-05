@@ -225,7 +225,7 @@ span#A-letter {
 }
 
 .home-btn-off {
-  left: -20% !important;
+  left: -30% !important;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
@@ -632,7 +632,7 @@ g, path {
 }
 
 #school-container .school-list {
-  padding-top: 5%;
+  padding: 5% 0;
 }
 #school-container .school-list .school-element {
   height: 80vh;
@@ -663,31 +663,30 @@ g, path {
 }
 #work-container {
   min-height: 100vh;
-  background-color: var(--work-bg);
+  background-image: url("../assets/work-images/brick-tile.png");
+  background-repeat: repeat;
 }
 
 #work-container .work-list {
-  padding-top: 5%;
+  padding: 3% 0 4% 0;
 }
 #work-container .work-list .work-element {
-  height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #work-container .work-list .work-element .work-card {
+  margin: 8% 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: white;
   border-radius: 10px;
-  width: 80vw;
-  max-width: 70vh;
-  max-height: 90vh;
+  width: 70vw;
   padding: 20px;
 }
 #work-container .work-list .work-element .work-card .work-image {
-  max-height: 50%;
+  max-height: 25vw;
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -702,16 +701,10 @@ g, path {
   width: 3px;
   background-color: var(--gray);
 }
-#work-container .work-list #work-gallus .work-card .work-image {
-  height: 30%;
-}
-#work-container .work-list #work-codellege {
-  height: 80vh;
-}
 
 #projects-container {
   min-height: 100vh;
-  background-color: rgba(29, 104, 162, 0.9);
+  background-color: rgba(13, 130, 219, 0.5);
   background-image: linear-gradient(rgba(255, 255, 255, 0.5) 2px, transparent 2px), linear-gradient(90deg, rgba(255, 255, 255, 0.5) 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.28) 1px, transparent 1px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
@@ -748,8 +741,8 @@ g, path {
   cursor: pointer;
   text-align: left;
   display: inline-block;
-  height: 50vw;
-  width: 80vw;
+  height: 60vw;
+  width: 90vw;
   margin-bottom: 8vw;
   position: relative;
 }
@@ -891,5 +884,33 @@ g, path {
   }
   #school-container .school-list .school-element .school-divider {
     width: 3.3px;
+  }
+  .work-element .work-card {
+    margin: 2% 0 !important;
+    width: 80vw !important;
+    max-width: 70vh !important;
+    height: 90vh !important;
+    padding: 20px;
+  }
+  .work-element .work-card .work-image {
+    max-height: 50%;
+    max-width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #work-gallus .work-card {
+    margin-right: 10% !important;
+  }
+  #work-gallus .work-card .work-image {
+    height: 30% !important;
+  }
+  #work-fundusol .work-card {
+    margin-right: -10% !important;
+  }
+  #work-codellege {
+    height: 80vh !important;
+  }
+  #work-codellege .work-card {
+    margin-right: 10% !important;
   }
 }/*# sourceMappingURL=main.css.map */
