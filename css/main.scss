@@ -47,7 +47,7 @@
     --age-fs-pc: 30px;
     --age-fs-mobile: 18px;
 
-    --projects-title-fs-mobile: 23px;
+    --projects-title-fs-mobile: 20px;
     --projects-desc-fs-mobile: 18px;
 }
 
@@ -839,7 +839,73 @@ g, path {
 #school-container {
     min-height: 100vh;
     background-color: var(--school-bg);
+    background-size: 30px 30px;
+    background-image:
+        linear-gradient(to right, rgb(124, 124, 124, 0.5) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(124, 124, 124, 0.5) 1px, transparent 1px);
 }
+
+#school-container {
+    .school-list {
+        .school-element {
+            // height: 60vw;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // width: 80vw;
+            .school-card {
+                background-color: white;
+                // background-color: var(--school-bg);
+                border-radius: 10px;
+                // height: 50vw;
+                width: 80vw;
+                max-width: 70vh;
+                // max-height: 50vh;
+                padding: 20px;
+                // background-color: var(--school-bg);
+                .school-image {
+                    max-height: 50%;
+                    max-width: 100%;
+                }
+    
+                .school-text {
+                    font-family: var(--thin-font);
+                    font-size: var(--projects-title-fs-mobile);
+                    letter-spacing: 0.093em;
+                }
+            }
+
+            .school-divider {
+                // content: '&nbsp';
+                // height: 100px;
+                height: 100%;
+                width: 10px;
+                background-color: var(--gray);
+            }
+        }
+
+        #school-cmu {
+            .school-card {
+                margin-top: 5%;
+            }
+        }
+
+        #school-harvard {
+
+        }
+
+        #school-cornell {
+
+        }
+
+        #school-asfm {
+
+        }
+    }
+}
+
+
 
 ///////////////////////////////// WORK CONTAINER ///////////////////////////////
 
@@ -852,7 +918,17 @@ g, path {
 
 #projects-container {
     min-height: 100vh;
-    background-color: var(--projects-bg);
+    // background-color: var(--projects-bg);
+    
+    background-color: rgb(29, 104, 162, .9);
+    background-image:
+      linear-gradient(rgba(255,255,255,.5) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(255,255,255,.5) 2px, transparent 2px),
+      linear-gradient(rgba(255,255,255,.28) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.28) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -878,20 +954,25 @@ g, path {
 }
 
 .projects-grid {
+    width: 100%;
     .projects-row {
+        width: 100%;
         // display: flex;
         // display: flex;
         justify-content: center;
         display: flex;
         flex-direction: column;
         // flex-direction: row;
+        align-items: center;
         .projects-element {
             cursor:pointer;
             text-align: left;
             display:inline-block;
-            height: 230px;
-            width: 380px;
-            margin-bottom: 20px;
+            // height: 230px;
+            height: 50vw;
+            // width: 380px;
+            width: 80vw;
+            margin-bottom: 8vw;
             
             position: relative;
             .projects-text {
@@ -1112,7 +1193,7 @@ g, path {
     }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1300px) {
     // ul.projects-list {
     //     li.projects-element {
     //             height: 350px;

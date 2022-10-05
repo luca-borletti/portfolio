@@ -7,6 +7,8 @@ window.onload = function() {
     const name = document.getElementById('name'); 
     const navbar = document.getElementById('header'); 
 
+    const toolbeltContainer = document.getElementById('drawing-container'); 
+
     const poundLogo = document.getElementById('pound-symbol'); 
     const pTopRight = document.getElementById('w_top_right'); 
     const pRight = document.getElementById('w_right'); 
@@ -551,6 +553,24 @@ window.onload = function() {
             returnTools();
         }
     });
+
+    // toolbelt.addEventListener("click", () => {
+    //     // if (mode == "main") {
+    //     //     hover = "";
+    //     //     returnTools();
+    //     // }
+    //     switch (mode) {
+    //         // case 'main'
+    //         case 'school':
+    //             closeSchool();
+    //         case 'work':
+    //             closeWork();
+    //         case 'projects':
+    //             closeProjects();
+    //         case 'contact':
+    //             closeContact();
+    //     }
+    // });
     
 
     // time stuff
