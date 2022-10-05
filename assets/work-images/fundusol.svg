@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="285.715" height="68.008" viewBox="0 0 285.715 68.008">
+  <g id="Group_15" data-name="Group 15" transform="translate(-583.285 -228.996)">
+    <g id="Group_16" data-name="Group 16" transform="translate(1 1)">
+      <text id="FUNDUSOL" transform="translate(670 274.5)" font-size="41" font-family="SourceSansPro-Semibold, Source Sans Pro" font-weight="600"><tspan x="0" y="0">FUNDUSOL</tspan></text>
+      <g id="Group_15-2" data-name="Group 15" transform="translate(555.285 213.746)">
+        <g id="Group_9" data-name="Group 9" transform="translate(27 14.25)">
+          <g id="Group_6" data-name="Group 6" transform="translate(0 0)">
+            <g id="Group_5" data-name="Group 5">
+              <circle id="Ellipse_1" data-name="Ellipse 1" cx="33.937" cy="33.937" r="33.937" transform="translate(0.135 0.135)" fill="#306ef6"/>
+              <g id="Group_3" data-name="Group 3" transform="translate(0.135 0.135)">
+                <path id="Path_9" data-name="Path 9" d="M39.037,5.4a35.092,35.092,0,0,0-13.6,2.828,10.335,10.335,0,0,1,.943,4.579A11.093,11.093,0,0,1,15.335,23.85a10.271,10.271,0,0,1-5.656-1.616A33.136,33.136,0,0,0,5.1,39.337,33.937,33.937,0,1,0,39.037,5.4Z" transform="translate(-5.1 -5.4)" fill="none"/>
+                <path id="Path_10" data-name="Path 10" d="M25.164,12.079A12.62,12.62,0,0,0,24.222,7.5,32.934,32.934,0,0,0,8.6,21.506a11.525,11.525,0,0,0,5.656,1.616A10.978,10.978,0,0,0,25.164,12.079Z" transform="translate(-3.887 -4.672)" fill="#fadf5f"/>
+              </g>
+              <g id="Group_4" data-name="Group 4">
+                <path id="Path_11" data-name="Path 11" d="M19.814,67.113a84.256,84.256,0,0,1,52.117-20.2,36.281,36.281,0,0,0,.943-7.676,33.937,33.937,0,1,0-53.06,27.877Z" transform="translate(-5 -5.3)" fill="none"/>
+                <path id="Path_12" data-name="Path 12" d="M35.223,62.426A33.939,33.939,0,0,0,68.217,36.3,83.949,83.949,0,0,0,16.1,56.5,33.187,33.187,0,0,0,35.223,62.426Z" transform="translate(-1.152 5.448)" fill="#94e044"/>
+              </g>
+            </g>
+            <path id="Path_13" data-name="Path 13" d="M50.19,29.551H17.6L23.795,17.7H56.52Z" transform="translate(-0.632 -1.001)" fill="#fff"/>
+            <path id="Path_14" data-name="Path 14" d="M36.992,41.251H17.6L23.795,29.4H43.322Z" transform="translate(-0.632 3.055)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -847,6 +847,7 @@ g, path {
 
 #school-container {
     .school-list {
+        padding-top: 5%;
         .school-element {
             // height: 60vw;
             height: 80vh;
@@ -880,14 +881,16 @@ g, path {
                 // content: '&nbsp';
                 // height: 100px;
                 height: 100%;
-                width: 10px;
+                // width: 10px;
+                width: 3px;
+                
                 background-color: var(--gray);
             }
         }
 
         #school-cmu {
             .school-card {
-                margin-top: 5%;
+                // margin-top: 5%;
             }
         }
 
@@ -913,6 +916,77 @@ g, path {
     min-height: 100vh;
     background-color: var(--work-bg);
 }
+
+#work-container {
+    .work-list {
+        padding-top: 5%;
+        .work-element {
+            // height: 60vw;
+            height: 120vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // width: 80vw;
+            .work-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                background-color: white;
+                // background-color: var(--work-bg);
+                border-radius: 10px;
+                // height: 50vw;
+                width: 80vw;
+                max-width: 70vh;
+                // height: 60vh;
+                max-height: 90vh;
+                padding: 20px;
+                // background-color: var(--work-bg);
+
+                .work-image {
+                    max-height: 50%;
+                    max-width: 100%;
+                    // margin: 0 auto;
+                    object-fit:contain;
+                }
+    
+                .work-text {
+                    font-family: var(--thin-font);
+                    font-size: var(--projects-title-fs-mobile);
+                    letter-spacing: 0.093em;
+                }
+            }
+
+            .work-divider {
+                // content: '&nbsp';
+                // height: 100px;
+                height: 100%;
+                // width: 10px;
+                width: 3px;
+                
+                background-color: var(--gray);
+            }
+        }
+
+        #work-gallus {
+            .work-card {
+                .work-image {
+                    height: 30%;
+                    // width: 
+                }
+            }
+        }
+
+        #work-fundusol {
+
+        }
+
+        #work-codellege {
+            height: 80vh;
+        }
+    }
+}
+
+
 
 ////////////////////////////// PROJECTS CONTAINER //////////////////////////////
 
@@ -1294,5 +1368,15 @@ g, path {
         height: 2.8px;
     }
 
+
+    #school-container {
+        .school-list {
+            .school-element {
+                .school-divider {
+                    width: 3.3px;
+                }
+            }
+        }
+    }
 }
 
