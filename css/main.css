@@ -661,6 +661,7 @@ g, path {
   width: 3px;
   background-color: var(--gray);
 }
+
 #work-container {
   min-height: 100vh;
   background-image: url("../assets/work-images/brick-tile.png");
