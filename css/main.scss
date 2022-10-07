@@ -14,11 +14,11 @@
 }
 
 :root {
-    --yellow: #E9C645;
-    --green: #77B856;
-    --blue: #2F6DF6;
-    --red: #BF436C;
-    --gray: #505050;
+    --yellowS: #E9C645;
+    --greenS: #77B856;
+    --blueS: #2F6DF6;
+    --redS: #BF436C;
+    --grayS: #505050;
 
     --contact-bg: #232529;
     --contact-lightgray: #6A6E78;
@@ -60,7 +60,7 @@ body{
 }
 
 ::selection {
-    // background: var(--yellow) !important;
+    // background: var(--yellowS) !important;
     // background: rgb(237, 195, 137, 0.5) !important;
     // background: rgb(146, 93, 177, 0.3) !important;
     background: rgb(233, 198, 69, 0.5) !important;
@@ -84,20 +84,20 @@ p, h1, span {
 h1 {
     font-family: var(--thin-font);
     font-size: var(--luca-fs-mobile);
-    color: var(--gray);
+    color: var(--grayS);
 }
 
 span#L-letter {
-    color: var(--yellow);
+    color: var(--yellowS);
 }
 span#U-letter {
-    color: var(--green);
+    color: var(--greenS);
 }
 span#C-letter {
-    color: var(--blue);
+    color: var(--blueS);
 }
 span#A-letter {
-    color: var(--red);
+    color: var(--redS);
 }
 
 #header {
@@ -130,7 +130,7 @@ span#A-letter {
                 margin-top: 2%;
                 font-size: var(--epithet-fs-mobile);
                 font-family: var(--thin-font);
-                color: var(--gray);
+                color: var(--grayS);
             }
             #name {
                 cursor: pointer;
@@ -145,7 +145,7 @@ span#A-letter {
 
                     span#BORLETTI {
                         font-family: var(--thin-font);
-                        color: var(--gray);
+                        color: var(--grayS);
                     }
                 }
             }
@@ -173,14 +173,14 @@ span#A-letter {
     left: 5%;
     margin: 0;
     // transition: all 0.4s ease 0s;
-    color: var(--gray);
+    color: var(--grayS);
 
     p {
         margin: 0;
     }
     transition: all .5s ease-in-out;
     // display: flex;
-    border: 2.5px solid var(--gray);
+    border: 2.5px solid var(--grayS);
     // outline: 5px none var(--primary-blue);
     span {
         display: inline-block;
@@ -215,7 +215,7 @@ span#A-letter {
     left: 5%;
     margin: 0;
     // transition: all 0.4s ease 0s;
-    color: var(--gray);
+    color: var(--grayS);
 
     p {
         margin: 0;
@@ -223,7 +223,7 @@ span#A-letter {
     // transition: all .5s ease-in-out;
     transition:.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     // display: flex;
-    // border: 2.5px solid var(--gray);
+    // border: 2.5px solid var(--grayS);
     // outline: 5px none var(--primary-blue);
     span.back-text {
         display: inline-block;
@@ -258,7 +258,7 @@ span#A-letter {
     // font-weight:200;
     // border-width: thick;
     color: white;
-    background: var(--gray);
+    background: var(--grayS);
     
     span.back-text {
         padding-right: 10px;
@@ -278,7 +278,7 @@ span#A-letter {
     // font-weight:200;
     // border-width: thick;
     color: white;
-    background: var(--gray);
+    background: var(--grayS);
     
     span {
         padding-left: 15px;
@@ -310,7 +310,7 @@ span#A-letter {
     position:absolute;
     bottom: 5%;
     left: 5%;
-    color: var(--gray);
+    color: var(--grayS);
     margin: 0;
     padding: 0;
     // display: flex;
@@ -337,7 +337,7 @@ span#A-letter {
 //   height: 0.1em;
   height: 2.2px;
 //   background-color: var(--primary-darkgray);
-  background-color: var(--gray);
+  background-color: var(--grayS);
   opacity: 1;
   transition: opacity 300ms, transform 300ms;
 }
@@ -368,7 +368,7 @@ span#A-letter {
 //     letter-spacing: 5px;
 // }
 // .gobackanimated {
-//     background: linear-gradient(to right, var(--yellow),  var(--green), var(--blue), var(--red));
+//     background: linear-gradient(to right, var(--yellowS),  var(--greenS), var(--blueS), var(--redS));
 //     -webkit-background-clip: text;
 //     background-clip: text;
 //     color: transparent;
@@ -427,7 +427,7 @@ span#A-letter {
 
 .age {
     font-family: var(--thin-font);
-    color: var(--gray);
+    color: var(--grayS);
     letter-spacing: 0.093em;
     font-size: var(--age-fs-pc);
 }
@@ -442,9 +442,9 @@ span#A-letter {
     // position: absolute;
 
     #nav-projects {
-        color: var(--yellow);
+        color: var(--yellowS);
         text-shadow: .5px .5px var(--contact-lightgray);
-        // color: var(--gray);
+        // color: var(--grayS);
         font-family: var(--thin-font);
         font-size: var(--luca-fs-pc);
         // font-size: 25px;
@@ -453,9 +453,9 @@ span#A-letter {
     }
     
     #nav-work {
-        color: var(--green);
+        color: var(--greenS);
         text-shadow: .5px .5px var(--contact-lightgray);
-        // color: var(--gray);
+        // color: var(--grayS);
         font-family: var(--thin-font);
         font-size: var(--luca-fs-pc);
         // font-size: 25px;
@@ -464,9 +464,9 @@ span#A-letter {
     }
     
     #nav-school {
-        color: var(--blue);
+        color: var(--blueS);
         text-shadow: .5px .5px var(--contact-lightgray);
-        // color: var(--gray);
+        // color: var(--grayS);
         font-family: var(--thin-font);
         font-size: var(--luca-fs-pc);
         // font-size: 25px;
@@ -475,9 +475,9 @@ span#A-letter {
     }
     
     #nav-contact {
-        color: var(--red);
+        color: var(--redS);
         text-shadow: .5px .5px var(--contact-lightgray);
-        // color: var(--gray);
+        // color: var(--grayS);
         font-family: var(--thin-font);
         font-size: var(--luca-fs-pc);
         // font-size: 25px;
@@ -914,7 +914,7 @@ input {
                 // width: 10px;
                 width: 3px;
                 
-                background-color: var(--gray);
+                background-color: var(--grayS);
             }
         }
 
@@ -998,7 +998,7 @@ input {
                 // width: 10px;
                 width: 3px;
                 
-                background-color: var(--gray);
+                background-color: var(--grayS);
             }
         }
     }
@@ -1109,7 +1109,7 @@ input {
 
     #projects-clickshare {
         background-image: url("../assets/info-sections/clickshare-bg.png");
-        // background-image: linear-gradient(var(--blue), var(--blue)), 
+        // background-image: linear-gradient(var(--blueS), var(--blueS)), 
         //     url("../assets/info-sections/clickshare-bg.png");
         background-size:cover;
         background-repeat: no-repeat;
@@ -1175,20 +1175,20 @@ input {
 //             border-radius: 0 20px 0 0;
 //             .projects-title {
 //                 font-family: var(--regular-font);
-//                 // color: var(--gray);
+//                 // color: var(--grayS);
 //                 // color: white;
 //                 color: white;
-//                 // color: var(--yellow);
+//                 // color: var(--yellowS);
 //                 font-size: var(--projects-title-fs-mobile);
 //                 letter-spacing: 0.093em;
 //             }
 //             .projects-description {
 //                 margin-top: 5px;
 //                 font-family: var(--thin-font);
-//                 // color: var(--gray);
+//                 // color: var(--grayS);
 //                 // color: white;
 //                 color: white;
-//                 // color: var(--yellow);
+//                 // color: var(--yellowS);
 //                 // font-size: ;
 //                 // font-size: var(--luca-fs-pc);
 //                 font-size: var(--projects-desc-fs-mobile);
@@ -1222,7 +1222,7 @@ input {
 
 //     #projects-clickshare {
 //         background-image: url("../assets/info-sections/clickshare-bg.png");
-//         // background-image: linear-gradient(var(--blue), var(--blue)), 
+//         // background-image: linear-gradient(var(--blueS), var(--blueS)), 
 //         //     url("../assets/info-sections/clickshare-bg.png");
 //         background-size:cover;
 //         background-repeat: no-repeat;

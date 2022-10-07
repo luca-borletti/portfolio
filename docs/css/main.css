@@ -12,11 +12,11 @@
   src: url("../assets/HelveticaNeue-Light-08.ttf") format("truetype");
 }
 :root {
-  --yellow: #E9C645;
-  --green: #77B856;
-  --blue: #2F6DF6;
-  --red: #BF436C;
-  --gray: #505050;
+  --yellowS: #E9C645;
+  --greenS: #77B856;
+  --blueS: #2F6DF6;
+  --redS: #BF436C;
+  --grayS: #505050;
   --contact-bg: #232529;
   --contact-lightgray: #6A6E78;
   --school-bg: #f0f4fc;
@@ -69,23 +69,23 @@ p, h1, span {
 h1 {
   font-family: var(--thin-font);
   font-size: var(--luca-fs-mobile);
-  color: var(--gray);
+  color: var(--grayS);
 }
 
 span#L-letter {
-  color: var(--yellow);
+  color: var(--yellowS);
 }
 
 span#U-letter {
-  color: var(--green);
+  color: var(--greenS);
 }
 
 span#C-letter {
-  color: var(--blue);
+  color: var(--blueS);
 }
 
 span#A-letter {
-  color: var(--red);
+  color: var(--redS);
 }
 
 #header {
@@ -111,7 +111,7 @@ span#A-letter {
   margin-top: 2%;
   font-size: var(--epithet-fs-mobile);
   font-family: var(--thin-font);
-  color: var(--gray);
+  color: var(--grayS);
 }
 #header #header-container .nav-text #name {
   cursor: pointer;
@@ -125,7 +125,7 @@ span#A-letter {
 }
 #header #header-container .nav-text #name h1.luca span#BORLETTI {
   font-family: var(--thin-font);
-  color: var(--gray);
+  color: var(--grayS);
 }
 #header #header-container #pound-symbol {
   display: none;
@@ -144,9 +144,9 @@ span#A-letter {
   bottom: 5%;
   left: 5%;
   margin: 0;
-  color: var(--gray);
+  color: var(--grayS);
   transition: all 0.5s ease-in-out;
-  border: 2.5px solid var(--gray);
+  border: 2.5px solid var(--grayS);
 }
 #home p {
   margin: 0;
@@ -174,7 +174,7 @@ span#A-letter {
   bottom: 5%;
   left: 5%;
   margin: 0;
-  color: var(--gray);
+  color: var(--grayS);
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 #back p {
@@ -199,7 +199,7 @@ span#A-letter {
 #back:hover {
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   color: white;
-  background: var(--gray);
+  background: var(--grayS);
 }
 #back:hover span.back-text {
   padding-right: 10px;
@@ -213,7 +213,7 @@ span#A-letter {
 #home:hover {
   transition: all 0.5s ease-in-out;
   color: white;
-  background: var(--gray);
+  background: var(--grayS);
 }
 #home:hover span {
   padding-left: 15px;
@@ -237,7 +237,7 @@ span#A-letter {
   position: absolute;
   bottom: 5%;
   left: 5%;
-  color: var(--gray);
+  color: var(--grayS);
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -263,7 +263,7 @@ span#A-letter {
   width: 300%;
   border-radius: 3px;
   height: 2.2px;
-  background-color: var(--gray);
+  background-color: var(--grayS);
   opacity: 1;
   transition: opacity 300ms, transform 300ms;
 }
@@ -307,7 +307,7 @@ span#A-letter {
 
 .age {
   font-family: var(--thin-font);
-  color: var(--gray);
+  color: var(--grayS);
   letter-spacing: 0.093em;
   font-size: var(--age-fs-pc);
 }
@@ -317,7 +317,7 @@ span#A-letter {
   display: flex;
 }
 #nav-menu #nav-projects {
-  color: var(--yellow);
+  color: var(--yellowS);
   text-shadow: 0.5px 0.5px var(--contact-lightgray);
   font-family: var(--thin-font);
   font-size: var(--luca-fs-pc);
@@ -325,7 +325,7 @@ span#A-letter {
   font-weight: bold;
 }
 #nav-menu #nav-work {
-  color: var(--green);
+  color: var(--greenS);
   text-shadow: 0.5px 0.5px var(--contact-lightgray);
   font-family: var(--thin-font);
   font-size: var(--luca-fs-pc);
@@ -333,7 +333,7 @@ span#A-letter {
   font-weight: bold;
 }
 #nav-menu #nav-school {
-  color: var(--blue);
+  color: var(--blueS);
   text-shadow: 0.5px 0.5px var(--contact-lightgray);
   font-family: var(--thin-font);
   font-size: var(--luca-fs-pc);
@@ -341,7 +341,7 @@ span#A-letter {
   font-weight: bold;
 }
 #nav-menu #nav-contact {
-  color: var(--red);
+  color: var(--redS);
   text-shadow: 0.5px 0.5px var(--contact-lightgray);
   font-family: var(--thin-font);
   font-size: var(--luca-fs-pc);
@@ -653,7 +653,7 @@ input {
 #school-container .school-list .school-element .school-divider {
   height: 100%;
   width: 3px;
-  background-color: var(--gray);
+  background-color: var(--grayS);
 }
 
 #work-container {
@@ -694,7 +694,7 @@ input {
 #work-container .work-list .work-element .work-divider {
   height: 100%;
   width: 3px;
-  background-color: var(--gray);
+  background-color: var(--grayS);
 }
 
 #projects-container {
