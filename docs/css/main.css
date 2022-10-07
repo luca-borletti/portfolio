@@ -391,6 +391,10 @@ g, path {
   transform: scale(1.2) translate(15%, 0);
 }
 
+#toolbelt {
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+}
+
 #g_pencil_1, #g_pencil_2, #g_bp, #g_wrench, #g_hammer, #g_phone {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
@@ -629,7 +633,6 @@ input {
   padding: 5% 0;
 }
 #school-container .school-list .school-element {
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -651,14 +654,15 @@ input {
   letter-spacing: 0.093em;
 }
 #school-container .school-list .school-element .school-divider {
-  height: 100%;
+  height: 10vh;
   width: 3px;
   background-color: var(--grayS);
 }
 
 #work-container {
   min-height: 100vh;
-  background-image: url("../assets/work-images/brick-tile.png");
+  background-image: url("../assets/work-images/brick-tiling-75a-r.svg");
+  background-size: 300px;
   background-repeat: repeat;
 }
 
@@ -681,7 +685,7 @@ input {
   padding: 20px;
 }
 #work-container .work-list .work-element .work-card .work-image {
-  max-height: 25vw;
+  max-height: 20vh;
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -695,6 +699,18 @@ input {
   height: 100%;
   width: 3px;
   background-color: var(--grayS);
+}
+
+.bold {
+  font-family: var(--bold-font);
+}
+
+.italics {
+  font-style: italic;
+}
+
+.center {
+  text-align: center !important;
 }
 
 #projects-container {
@@ -879,16 +895,16 @@ input {
   }
   #school-container .school-list .school-element .school-divider {
     width: 3.3px;
+    height: 20vh;
   }
   .work-element .work-card {
     margin: 2% 0 !important;
     width: 80vw !important;
     max-width: 70vh !important;
-    height: 90vh !important;
     padding: 20px;
   }
   .work-element .work-card .work-image {
-    max-height: 50%;
+    max-height: 20vh !important;
     max-width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
@@ -901,9 +917,6 @@ input {
   }
   #work-fundusol .work-card {
     margin-right: -10% !important;
-  }
-  #work-codellege {
-    height: 80vh !important;
   }
   #work-codellege .work-card {
     margin-right: 10% !important;
