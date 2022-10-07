@@ -795,43 +795,73 @@ g, path {
 #contact-container {
     min-height: 100vh;
     background-color: var(--contact-bg);
-    #contact-rising-rectangles {
-        width: 100%;
-        // display: grid;
-        // grid;
-        // display: flex;
-        // flex-direction: row;
-        padding: 0;
-        margin: 0;
-        .rising-rectangle {
-            background-color: var(--contact-bg);
-        }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        #rising-rectangle-1 {
-            left: 0;
-            width: 3%;
-            margin-top: -10rem;
-            height: 10rem;
-        }
-        #rising-rectangle-2 {
-            left: 0;
-            width: 3%;
-            margin-top: -10rem;
-            height: 10rem;
-        }
-        #rising-rectangle-3 {
-            left: 0;
-            width: 3%;
-            margin-top: -10rem;
-            height: 10rem;
-        }
-        #rising-rectangle-4 {
-            left: 0;
-            width: 3%;
-            margin-top: -10rem;
-            height: 10rem;
-        }
+    .contact-title {
+        font-size: var(--luca-fs-mobile);
+        letter-spacing: 0.093em;
+        font-family: var(--regular-font);
     }
+
+    .contact-form-label {
+        font-size: var(--epithet-fs-mobile);
+        letter-spacing: 0.093em;
+        font-family: var(--thin-font);
+    }
+
+    
+    // #contact-rising-rectangles {
+    //     width: 100%;
+    //     // display: grid;
+    //     // grid;
+    //     // display: flex;
+    //     // flex-direction: row;
+    //     padding: 0;
+    //     margin: 0;
+    //     .rising-rectangle {
+    //         background-color: var(--contact-bg);
+    //     }
+
+    //     #rising-rectangle-1 {
+    //         left: 0;
+    //         width: 3%;
+    //         margin-top: -10rem;
+    //         height: 10rem;
+    //     }
+    //     #rising-rectangle-2 {
+    //         left: 0;
+    //         width: 3%;
+    //         margin-top: -10rem;
+    //         height: 10rem;
+    //     }
+    //     #rising-rectangle-3 {
+    //         left: 0;
+    //         width: 3%;
+    //         margin-top: -10rem;
+    //         height: 10rem;
+    //     }
+    //     #rising-rectangle-4 {
+    //         left: 0;
+    //         width: 3%;
+    //         margin-top: -10rem;
+    //         height: 10rem;
+    //     }
+    // }
+}
+
+::-webkit-input-placeholder {
+    font-family: var(--thin-font);
+}
+
+:-ms-input-placeholder {
+    font-family: var(--thin-font);
+}
+  
+input {
+    font-family: var(--thin-font);
 }
 
 ////////////////////////////// SCHOOL CONTAINER ////////////////////////////////
@@ -1229,6 +1259,10 @@ g, path {
 //     //     background-image: ;
 //     // }
 
+// }
+
+// input, textarea {
+//     background-color: #ef4040;
 // }
 
 ////////////////////////////////////////////////////////////////////////////////

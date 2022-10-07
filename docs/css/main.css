@@ -590,38 +590,32 @@ g, path {
 #contact-container {
   min-height: 100vh;
   background-color: var(--contact-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#contact-container #contact-rising-rectangles {
-  width: 100%;
-  padding: 0;
-  margin: 0;
+#contact-container .contact-title {
+  font-size: var(--luca-fs-mobile);
+  letter-spacing: 0.093em;
+  font-family: var(--regular-font);
 }
-#contact-container #contact-rising-rectangles .rising-rectangle {
-  background-color: var(--contact-bg);
+#contact-container .contact-form-label {
+  font-size: var(--epithet-fs-mobile);
+  letter-spacing: 0.093em;
+  font-family: var(--thin-font);
 }
-#contact-container #contact-rising-rectangles #rising-rectangle-1 {
-  left: 0;
-  width: 3%;
-  margin-top: -10rem;
-  height: 10rem;
+
+::-webkit-input-placeholder {
+  font-family: var(--thin-font);
 }
-#contact-container #contact-rising-rectangles #rising-rectangle-2 {
-  left: 0;
-  width: 3%;
-  margin-top: -10rem;
-  height: 10rem;
+
+:-ms-input-placeholder {
+  font-family: var(--thin-font);
 }
-#contact-container #contact-rising-rectangles #rising-rectangle-3 {
-  left: 0;
-  width: 3%;
-  margin-top: -10rem;
-  height: 10rem;
-}
-#contact-container #contact-rising-rectangles #rising-rectangle-4 {
-  left: 0;
-  width: 3%;
-  margin-top: -10rem;
-  height: 10rem;
+
+input {
+  font-family: var(--thin-font);
 }
 
 #school-container {
