@@ -1,4 +1,5 @@
 window.onload = function() {
+    // window.location.href.split('#')[0];
     const lLetter = document.getElementById('L-letter'); 
     const uLetter = document.getElementById('U-letter'); 
     const cLetter = document.getElementById('C-letter'); 
@@ -58,12 +59,12 @@ window.onload = function() {
 
     let ageEl = document.getElementById("age");
 
-    if (ageEl) {
-        setInterval(() => {
-            let time = dayjs().diff(dayjs('2003-03-28'), 'year', true);
-            ageEl.innerText = time.toString().substring(0, 12);
-        }, 50);
-    }
+    // if (ageEl) {
+    //     setInterval(() => {
+    //         let time = dayjs().diff(dayjs('2003-03-28'), 'year', true);
+    //         ageEl.innerText = time.toString().substring(0, 12);
+    //     }, 50);
+    // }
     
     var hasHovered = false;
 
@@ -253,6 +254,10 @@ window.onload = function() {
     
     
     function openSchool() {
+        // window.location.href.split('#')[0];
+        // window.location.hash = "school";
+        const url = '';
+        history.pushState(url, '', url); 
         goHomeBtn.classList.remove("home-btn-off");
         delay(1000).then(() => toolbelt.classList.add('scale-belt-school'));
         schoolContainer.classList.remove("container-off");
@@ -270,6 +275,7 @@ window.onload = function() {
     }
 
     function closeSchool() {
+        window.location.href.split('#')[0];
         goHomeBtn.classList.add("home-btn-off");
         toolbelt.classList.remove('scale-belt-school');
         schoolContainer.classList.add("container-off");
@@ -324,6 +330,10 @@ window.onload = function() {
 
 
     function openWork() {
+        const url = '';
+        history.pushState(url, '', url); 
+        // window.location.href.split('#')[0];
+        // window.location.hash = "work";
         goHomeBtn.classList.remove("home-btn-off");
         delay(1000).then(() => toolbelt.classList.add('scale-belt-work'));
         workContainer.classList.remove("container-off");
@@ -338,6 +348,7 @@ window.onload = function() {
     }
 
     function closeWork() {
+        window.location.href.split('#')[0];
         goHomeBtn.classList.add("home-btn-off");
         toolbelt.classList.remove('scale-belt-work');
         workContainer.classList.add("container-off");
@@ -402,6 +413,10 @@ window.onload = function() {
 
 
     function openProjects() {
+        const url = '';
+        history.pushState(url, '', url); 
+        // window.location.href.split('#')[0];
+        // window.location.hash = "projects";
         goHomeBtn.classList.remove("home-btn-off");
         delay(1000).then(() => toolbelt.classList.add('scale-belt-projects'));
         projectsContainer.classList.remove("container-off");
@@ -416,6 +431,7 @@ window.onload = function() {
     }
 
     function closeProjects() {
+        window.location.href.split('#')[0];
         goHomeBtn.classList.add("home-btn-off");
         toolbelt.classList.remove('scale-belt-projects');
         projectsContainer.classList.add("container-off");
@@ -476,6 +492,10 @@ window.onload = function() {
       };  
 
     function openContact() {
+        const url = '';
+        history.pushState(url, '', url); 
+        // window.location.href.split('#')[0];
+        // window.location.hash = "contact";
         goHomeBtn.classList.remove("home-btn-off");
         delay(1000).then(() => toolbelt.classList.add('scale-belt-contact'));
         contactContainer.classList.remove("container-off");
@@ -497,6 +517,7 @@ window.onload = function() {
     }
 
     function closeContact() {
+        window.location.href.split('#')[0];
         goHomeBtn.classList.add("home-btn-off");
         toolbelt.classList.remove('scale-belt-contact');
         contactContainer.classList.add("container-off");
@@ -630,6 +651,7 @@ window.onload = function() {
 
     name.addEventListener("click", () => {
         goHome();
+        // window.location.href.split('#')[0];
     });
 
     function goHome() {
@@ -661,4 +683,61 @@ window.onload = function() {
             
     //     }
     // }
+    // (function () {
+    //     window.onpageshow = function(event) {
+    //         if (event.persisted) {
+    //             window.location.reload();
+    //         }
+    //     };
+    // })();
+
+    // function loadBodyContent(path, addToHistory, callback) {
+	
+    //     $.get( path, function( data ) {
+    //         $("#bodyContent").html( data );
+    //         $("#bodyContent").append("<div id='footerContent'></div>");
+    //         $("#footerContent").load("/ssi/footer.html");
+            
+    //         if (addToHistory != false) {
+    //             addHistory(path);
+    //         }
+            
+    //         if (callback) callback();
+    //     });
+        
+    // }
+
+    // function addHistory(path) {
+    //     history.pushState(path, null, null);
+    // }
+
+    // window.addEventListener('popstate', function(e) {
+	// 	var location = e.state;
+	
+	// 	if (location != null) {
+	// 		loadBodyContent(location,false);
+	// 		$('.addedMenuNavBarItem').remove();
+
+	// 	} else {
+	// 		window.history.back();
+	// 	}
+	// });
+    // window.addEventListener( "pageshow", function ( event ) {
+    //     var historyTraversal = event.persisted || 
+    //                            ( typeof window.performance != "undefined" && 
+    //                                 window.performance.navigation.type === 2 );
+    //     if ( historyTraversal ) {
+    //       // Handle page restore.
+    //       window.location.reload();
+    //     }
+    // });
+    jQuery( document ).ready(function( $ ) {
+
+        //Use this inside your document ready jQuery 
+        $(window).on('popstate', function() {
+           location.reload(true);
+        });
+     
+     });
 }
+
