@@ -144,7 +144,7 @@ span#A-letter {
                     letter-spacing: 0.093em;
 
                     span#BORLETTI {
-                        font-family: var(--thin-font);
+                        font-family: var(--regular-font);
                         color: var(--grayS);
                     }
                 }
@@ -157,6 +157,10 @@ span#A-letter {
             transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
         }
     }
+}
+
+.trevino {
+    display: none;
 }
 
 #home {
@@ -1370,6 +1374,10 @@ input {
 
 
 @media only screen and (min-width: 700px) {
+    .trevino {
+        display: unset !important;
+    }
+    
     #header {
         #header-container {
             .nav-text {
