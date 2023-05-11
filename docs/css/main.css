@@ -1,15 +1,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: helveticaNeue;
-  src: url("../assets/HelveticaNeue-01.ttf") format("truetype");
+  src: url("../assets/HelveticaNeue-01.woff") format("truetype");
 }
 @font-face {
   font-family: helveticaNeueBold;
-  src: url("../assets/HelveticaNeue-Bold-02.ttf") format("truetype");
+  src: url("../assets/HelveticaNeue-Bold-02.woff") format("truetype");
 }
 @font-face {
   font-family: helveticaNeueThin;
-  src: url("../assets/HelveticaNeue-Light-08.ttf") format("truetype");
+  src: url("../assets/HelveticaNeue-Light-08.woff") format("truetype");
 }
 :root {
   --yellowS: #E9C645;
@@ -453,21 +453,11 @@ g, path {
 .school_path_active {
   stroke-dasharray: 421.3840026855;
   stroke-dashoffset: 0;
-  -webkit-animation: school_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
-          animation: school_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+  animation: school_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
 }
 
 .school_path_inactive {
   display: none;
-}
-
-@-webkit-keyframes school_dash {
-  from {
-    stroke-dashoffset: 421.3840026855;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 
 @keyframes school_dash {
@@ -481,21 +471,11 @@ g, path {
 .contact_path_active {
   stroke-dasharray: 421.3840026855;
   stroke-dashoffset: 0;
-  -webkit-animation: contact_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
-          animation: contact_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+  animation: contact_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
 }
 
 .contact_path_inactive {
   display: none;
-}
-
-@-webkit-keyframes contact_dash {
-  from {
-    stroke-dashoffset: 421.3840026855;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 
 @keyframes contact_dash {
@@ -509,21 +489,11 @@ g, path {
 .work_path_active {
   stroke-dasharray: 355.6432189941;
   stroke-dashoffset: 0;
-  -webkit-animation: work_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
-          animation: work_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+  animation: work_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
 }
 
 .work_path_inactive {
   display: none;
-}
-
-@-webkit-keyframes work_dash {
-  from {
-    stroke-dashoffset: 355.6432189941;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 
 @keyframes work_dash {
@@ -537,21 +507,11 @@ g, path {
 .projects_path_active {
   stroke-dasharray: 408.7936096191;
   stroke-dashoffset: 0;
-  -webkit-animation: projects_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
-          animation: projects_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
+  animation: projects_dash 0.7s cubic-bezier(0.975, 0.22, 0.465, 1);
 }
 
 .projects_path_inactive {
   display: none;
-}
-
-@-webkit-keyframes projects_dash {
-  from {
-    stroke-dashoffset: 408.7936096191;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 
 @keyframes projects_dash {
@@ -577,7 +537,6 @@ g, path {
   opacity: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: default !important;
   pointer-events: none;
