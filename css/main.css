@@ -12,13 +12,13 @@
   src: url("../assets/HelveticaNeue-Light-08.woff") format("truetype");
 }
 :root {
-  --yellowS: #E9C645;
-  --greenS: #77B856;
-  --blueS: #2F6DF6;
-  --redS: #BF436C;
+  --yellowS: #e9c645;
+  --greenS: #77b856;
+  --blueS: #2f6df6;
+  --redS: #bf436c;
   --grayS: #505050;
   --contact-bg: #232529;
-  --contact-lightgray: #6A6E78;
+  --contact-lightgray: #6a6e78;
   --school-bg: #f0f4fc;
   --work-bg: #ffe8e8;
   --projects-bg: #b5dbff;
@@ -31,6 +31,8 @@
   --category-fs: 38px;
   --epithet-fs-pc: 30px;
   --epithet-fs-mobile: 23px;
+  --form-fs-pc: 30px;
+  --form-fs-mobile: 18px;
   --section-title-fs-pc: 30px;
   --section-title-fs-mobile: 23px;
   --age-fs-pc: 30px;
@@ -51,7 +53,8 @@ body {
   background: rgba(233, 198, 69, 0.5) !important;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -61,7 +64,9 @@ body {
   margin: 0;
 }
 
-p, h1, span {
+p,
+h1,
+span {
   padding: 0;
   margin: 0;
 }
@@ -282,11 +287,13 @@ span#A-letter {
   transform: translate3d(-67%, 0, 0);
 }
 
-#github, #linkedin {
+#github,
+#linkedin {
   cursor: pointer;
 }
 
-#github:hover, #linkedin:hover {
+#github:hover,
+#linkedin:hover {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   filter: brightness(110%) saturate(140%);
 }
@@ -371,7 +378,8 @@ svg#toolbelt {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
-g, path {
+g,
+path {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
@@ -399,12 +407,26 @@ g, path {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
-#g_pencil_1, #g_pencil_2, #g_bp, #g_wrench, #g_hammer, #g_phone {
+#g_pencil_1,
+#g_pencil_2,
+#g_bp,
+#g_wrench,
+#g_hammer,
+#g_phone {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
-#g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects,
-#g_work, #g_phone, #g_contact, #pound-symbol {
+#g_pencils,
+#g_wrench,
+#g_hammer,
+#g_bp,
+#school,
+#g_school,
+#g_projects,
+#g_work,
+#g_phone,
+#g_contact,
+#pound-symbol {
   cursor: pointer;
 }
 
@@ -522,11 +544,16 @@ g, path {
     stroke-dashoffset: 0;
   }
 }
-#projects_text, #work_text, #school_text, #contact_text {
+#projects_text,
+#work_text,
+#school_text,
+#contact_text {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
-.projects_text_inactive, .work_text_inactive, .school_text_inactive,
+.projects_text_inactive,
+.work_text_inactive,
+.school_text_inactive,
 .contact_text_inactive {
   display: unset;
   opacity: 0;
@@ -562,13 +589,11 @@ g, path {
   justify-content: center;
   align-items: center;
 }
-#contact-container .contact-title {
-  font-size: var(--luca-fs-mobile);
-  letter-spacing: 0.093em;
-  font-family: var(--regular-font);
+#contact-container .container {
+  width: 80%;
 }
 #contact-container .contact-form-label {
-  font-size: var(--epithet-fs-mobile);
+  font-size: var(--form-fs-mobile);
   letter-spacing: 0.093em;
   font-family: var(--thin-font);
 }
@@ -703,6 +728,8 @@ input {
 
 .projects-grid {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .projects-grid .projects-row {
   width: 100%;
@@ -787,13 +814,18 @@ input {
   }
 }
 @media only screen and (min-width: 1300px) {
+  #contact-container .container {
+    width: 50%;
+  }
   .projects-grid {
     margin-bottom: 5%;
+    gap: 20px;
   }
   .projects-grid .projects-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 20px;
   }
   .projects-grid .projects-row .projects-element {
     height: 350px;
@@ -806,13 +838,14 @@ input {
   .projects-grid .projects-row .projects-element .projects-text .projects-description {
     opacity: 0;
     height: 0;
+    overflow-y: hidden;
   }
   .projects-grid .projects-row .projects-element:hover .projects-text {
-    top: 65%;
+    top: 50%;
   }
   .projects-grid .projects-row .projects-element:hover .projects-text .projects-description {
     opacity: 1;
-    height: 50px;
+    height: 70%;
     overflow-y: hidden;
   }
 }
@@ -874,6 +907,9 @@ input {
     max-width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
+  }
+  #work-aws .work-card .work-image {
+    max-height: 25vh !important;
   }
   #work-gallus .work-card {
     margin-right: 10% !important;
