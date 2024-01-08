@@ -1136,6 +1136,14 @@ input {
 	//     }
 	// }
 
+	#projects-tai {
+		background-image: url("../assets/info-sections/tai-bg.png");
+		// background-image: linear-gradient(var(--blueS), var(--blueS)),
+		//     url("../assets/info-sections/clickshare-bg.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		// background-blend-mode: saturation;
+	}
 	#projects-clickshare {
 		background-image: url("../assets/info-sections/clickshare-bg.png");
 		// background-image: linear-gradient(var(--blueS), var(--blueS)),

@@ -771,6 +771,11 @@ input {
   letter-spacing: 0.093em;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.projects-grid #projects-tai {
+  background-image: url("../assets/info-sections/tai-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .projects-grid #projects-clickshare {
   background-image: url("../assets/info-sections/clickshare-bg.png");
   background-size: cover;
